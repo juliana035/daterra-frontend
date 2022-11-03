@@ -1,0 +1,30 @@
+.box1{
+    background-color: #C9E265 !important;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2{
+    background-color:#457D58 !important;
+    height: 30px;
+    
+}
+
+.redes{
+    font-size: 60px !important;
+    color: #457D58;
+   
+}
+
+
+.bt-feira{
+background-color: #457D58 !important;
+color: #C9E265 !important;
+}
+
+/* Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms */

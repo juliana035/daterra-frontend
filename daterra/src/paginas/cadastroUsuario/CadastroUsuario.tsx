@@ -1,3 +1,4 @@
+
 import React from "react";
 
 function CadastroUsuario() {
@@ -9,3 +10,4 @@ function CadastroUsuario() {
 }
 
 export default CadastroUsuario;
+
