@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -11,7 +12,6 @@ import "./Footer.css";
 
 function Footer() {
     return (
-        <>
 
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
