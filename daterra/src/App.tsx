@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-
 function App() {
 
   return (
@@ -23,14 +22,14 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/cadastro" element={<CadastroUsuario />} />
           <Route path="/about"  element={<About />}/>
+
         </Routes>
       </div>
       <Footer />
     </Router>
-  )
+  );
 
 
-  
 }
 
 export default App;
