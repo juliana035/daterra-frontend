@@ -1,0 +1,44 @@
+.loginFundo {
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("https://i.imgur.com/oG4KFnU.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #C9E265;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.loginBotaoEntrar {
+  justify-content: center;
+  align-items: center;
+}
+
+.loginLinkCadastro {
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
