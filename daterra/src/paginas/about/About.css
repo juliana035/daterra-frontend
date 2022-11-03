@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+.titleAbout{
+    font-family: 'Barlow', sans-serif !important;
+    font-size: 30px !important;
+}
+
+
+.imagemPerfil {
+    border-radius: 63% 37% 63% 37% / 75% 51% 49% 25%;
+    overflow: hidden;
+    border: 5px solid #457D58 ;
+}
+
+.textoAbout {
+    width: 70vw;
+    display: block;
+    margin: 0 auto;
+}
+
+*{
+    background-color: #F6F6E9;
+}
+
+.textAbout{
+    font-family: 'Barlow', sans-serif !important;
+    font-size: 20px !important;
+}
+
+.cursorAbout{
+    cursor: pointer;
+}
