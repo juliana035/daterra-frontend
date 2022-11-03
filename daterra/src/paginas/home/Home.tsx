@@ -1,5 +1,3 @@
-
-
 import { AltRoute } from '@mui/icons-material';
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
@@ -57,4 +55,5 @@ function Home() {
 
 
 export default Home;
+
 

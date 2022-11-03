@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -52,3 +53,4 @@ function Footer() {
 }
 
 export default Footer;
+

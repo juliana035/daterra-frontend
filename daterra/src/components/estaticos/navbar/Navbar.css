@@ -1,0 +1,30 @@
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.corFundo{
+    background-color: #C9E265;
+}
+
+.corTexto{
+    color: #272727;
+}
+
+.corTextoProdutos{
+    color: #272727;
+}
+
+.NabBarLogoMarca{
+    cursor: pointer !important;
+    color:  #272727 !important;
+    font-weight:bold;
+}
+
+.tamTexto{
+    font-size: large !important;
+}
