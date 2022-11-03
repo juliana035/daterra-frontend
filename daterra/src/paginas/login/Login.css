@@ -12,6 +12,7 @@
 }
 
 .loginCard {
+  color: #272727;
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -19,11 +20,17 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: #C9E265;
+  background-color: #c9e265;
+  backdrop-filter: blur(5px);
   border-radius: 10px;
 }
 
+.loginIcone {
+  color: #457d58;
+}
+
 form {
+  font-size: 1rem sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,11 +41,36 @@ form {
 .loginBotaoEntrar {
   justify-content: center;
   align-items: center;
+  color: #c9e265 !important; 
+  background-color: #457d58!important;
 }
 
+/* muda cor que aparece em "aqui!" */
 .loginLinkCadastro {
+  color: #457d58;
 }
 
-.text-decorator-none{
-    text-decoration: none;
+.MuiInput-underline{
+    color: red !important;
+}
+/* muda cor do texto do formulario */
+.MuiFormLabel-colorPrimary {
+  color: #272727 !important;
+}
+
+/* muda cor do texto de input */
+.MuiOutlinedInput-root {
+  color: #272727 !important;
+}
+
+/* .MuiInput-root::before{
+    color: red!important;
+}
+
+.MuiInput-root::after{
+    color: red!important;
+} */
+
+.text-decorator-none {
+  text-decoration: none;
 }

@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from "@material-ui/core";
 import { Box, TextField } from "@mui/material";
 import {Link} from 'react-router-dom';
+import LoginIcon from '@mui/icons-material/Login';
 import React from "react";
 import "./Login.css";
 
@@ -9,7 +10,8 @@ function Login (){
       <Grid container className="loginFundo">
       <Box className="loginCard">
         <form>
-          <Typography variant="h3" gutterBottom align="center">
+          <Typography variant="h3">
+          <LoginIcon className="loginIcone"/>
             Login
           </Typography>
           <TextField label="Usuário (e-mail)" name="usuario" />
