@@ -5,7 +5,7 @@ import Footer from "./components/estaticos/footer/Footer";
 
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
-import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
+//import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
 import About from "./paginas/about/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,11 +17,11 @@ function App() {
     <Router>
       <Navbar />
       <div style={{ minHeight: '100vh' }}>
-        <Routes> // Antigo Switch
+        <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />
+          {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
           <Route path="/about"  element={<About />}/>
 
         </Routes>
