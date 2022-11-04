@@ -34,7 +34,8 @@ function Navbar() {
                     <Box className={classes.title}>
                         <Box display="flex" justifyContent="start">
                             <Toolbar>
-                                <img src="https://i.postimg.cc/Fs74VKBM/Logo-com-letras.png" alt="Logotipo" height={130} width={300} />
+                              <Link to='/home' className='texto-decorator-none'><img src="https://i.postimg.cc/Fs74VKBM/Logo-com-letras.png" alt="Logotipo" height={130} width={300} /></Link>
+                                
                             </Toolbar>
                         </Box>
                         
@@ -43,7 +44,7 @@ function Navbar() {
                         
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
-                                Quem Somos |
+                                <Link to='/about' className='text-decorator-none'>Quem Somos</Link>
                             </Typography>
                         </Box>
                         <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>

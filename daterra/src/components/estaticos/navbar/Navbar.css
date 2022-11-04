@@ -28,3 +28,7 @@
 .tamTexto{
     font-size: large !important;
 }
+
+.text-decorator-none{
+    text-decoration: none;
+}
