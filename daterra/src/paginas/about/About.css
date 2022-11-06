@@ -19,10 +19,6 @@
     margin: 0 auto;
 }
 
-/* *{
-    background-color: #F6F6E9;
-} */
-
 .textAbout{
     font-family: 'Barlow', sans-serif !important;
     font-size: 20px !important;
@@ -30,4 +26,8 @@
 
 .cursorAbout{
     cursor: pointer;
+}
+
+.aboutgrid{
+    background-color: #F6F6E9;
 }
