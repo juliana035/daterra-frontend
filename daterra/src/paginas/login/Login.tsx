@@ -27,7 +27,7 @@ function Login (){
         </form>
   
         <Typography>
-          Não tem uma conta? Cadastre-se <Link to='/cadastro' className='loginLinkCadastro'>aqui</Link>!
+          Não tem uma conta? Cadastre-se <Link to='/cadastrousuario' className='loginLinkCadastro'>aqui</Link>!
           </Typography>
       </Box>
     </Grid>

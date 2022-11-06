@@ -1,6 +1,6 @@
 
 
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react"
@@ -8,7 +8,7 @@ import './About.css'
 
 function About(){
     return (
-        <>
+        <Grid className='aboutgrid'>
        
        <Box display="center" justifyContent="center">
             <Typography className= "titleAbout" ><h1>Quem somos nós</h1></Typography>
@@ -53,7 +53,7 @@ function About(){
             </Typography>
        <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/julia-gali-barroso/" title="https://www.linkedin.com/in/julia-gali-barroso/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/D4D35AQGky88DRwshpg/profile-framedphoto-shrink_800_800/0/1666665411297?e=1668099600&v=beta&t=y3VUwp49A1NUG6vd3dspwHyehz3PhdeHoHwxCT6SgZI" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/C4D03AQFqRbBnq-IEvw/profile-displayphoto-shrink_400_400/0/1661873205193?e=1673481600&v=beta&t=_WFPwPTKgcSF6JhfrGAc3-EJ9kdnnh0d2IqqIrav_JE" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
        <Typography className="cursorAbout">
@@ -74,7 +74,7 @@ function About(){
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi adipisci tempore in asperiores temporibus magni, quasi blanditiis, a delectus officiis amet incidunt vero ad repellendus, dignissimos animi similique officia ex.
         </Typography>
        </Box>
-        </>
+        </Grid>
     )
 }
 
