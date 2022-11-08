@@ -4,8 +4,6 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { Grid } from '@material-ui/core';
 import { Box } from '@mui/material';
-
-
 import './Home.css';
 
 
