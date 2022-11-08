@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 .cursor{
     cursor: pointer;
     color: white;
+ 
 }
 
 .text-decorator-none{
@@ -26,6 +29,7 @@
 }
 
 .tamTexto{
+    font-family: 'Barlow', sans-serif !important;
     font-size: large !important;
 }
 
