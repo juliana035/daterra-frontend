@@ -32,51 +32,51 @@ function Navbar() {
             <AppBar position="static">
                 <Toolbar variant="dense" className='corFundo'  >
                     <Box className={classes.title}>
-                        <Box display="flex" justifyContent="start">
+                        <Box display="flex" justifyContent="space-between">
                             <Toolbar>
-                              <Link to='/home' className='texto-decorator-none'><img src="https://i.postimg.cc/Fs74VKBM/Logo-com-letras.png" alt="Logotipo" height={130} width={300} /></Link>
+                              <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
                                 
                             </Toolbar>
                         </Box>
                         
                     </Box>
-                    <Box display="flex" justifyContent="start" className={classes.title} style={{ paddingRight: "1rem" }}>
+                    <Box display="flex" alignItems="center"> 
                         
-                        <Box mx={1} className='cursor'>
+                        <Box mx={1} className='cursor' display="flex" justifyContent="start" >
                             <Typography variant="h6" className="corTexto tamTexto">
-                                <Link to='/about' className='text-decorator-none'>Quem Somos</Link>
+                                <Link to='/about' className='text-decorator-none'>Quem Somos |</Link>
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 Como Comprar |
                             </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        </Box> */}
+                        <Box mx={1} className='cursor'  display="flex" justifyContent="start">
                             <Typography variant="h6" className="corTexto tamTexto">
-                                Meu Perfil |
+                                Meu Perfil  |
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        <Box mx={1} className='cursor' display="flex" justifyContent="start">
                             <Typography variant="h6" className="corTextoProdutos tamTexto">
                                 Todos Produtos |
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 Cadastrar Produto |
                             </Typography>
-                        </Box>
+                        </Box> */}
                         <Link to='/login' className='text-decorator-none'>
-                            <Box display="flex" mx={1} className='cursor' style={{ paddingRight: "10rem" }}>
+                            <Box display="flex" mx={1} className='cursor'   justifyContent="start">
                                 <Typography variant="h6" className="corTexto tamTexto">
                                     Sair
                                 </Typography>
                             </Box>
                         </Link>
-                        <Box display="flex" className='cursor'>
+                        <Box display="flex" className='cursor' justifyContent="start">
                             <Toolbar>
-                                <img src="https://i.postimg.cc/15y2H2x6/pngegg.png" alt="sacola de compras" height={60} width={60} />
+                                <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={60} width={60} />
                             </Toolbar>
                         </Box>
                     </Box>
