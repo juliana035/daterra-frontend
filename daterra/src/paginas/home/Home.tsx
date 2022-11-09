@@ -9,14 +9,21 @@ import "./Home.css";
 
 function Home() {
   const items = [
+   
     <img
-      src="https://i.imgur.com/btCbj6o.png"
+    src="https://i.imgur.com/Vv4mI4G.png"
+    alt=""
+    className="carouselImage"
+  />,
+      
+    <img
+      src="https://i.imgur.com/VmAZUnB.png"
       alt=""
       className="carouselImage"
     />,
 
     <img
-      src="https://i.imgur.com/n6718Fk.png"
+      src="https://i.imgur.com/kZpOlLu.png"
       alt=""
       className="carouselImage"
     />,

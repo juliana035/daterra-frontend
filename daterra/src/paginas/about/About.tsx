@@ -16,25 +16,25 @@ function About(){
        <Box display="flex" justifyContent="center" gap={2}>
             <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/cecilianakamura/" title="https://www.linkedin.com/in/cecilianakamura/" target="_blank">
-                <img className='imagemPerfil' src="https://i.imgur.com/YjE9HW5.jpg" alt="" width="200px" height="200px"/>
+                <img className='imagemPerfil' src="https://i.imgur.com/pqdp4zh.png" alt="" width="200px" height="200px"/>
                 </a>
             </Typography>
 
             <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/delfinavicente/" title="https://www.linkedin.com/in/delfinavicente/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/C4D03AQF0lNlyixHfZg/profile-displayphoto-shrink_200_200/0/1660229053717?e=1672876800&v=beta&t=tG8eHsArBSjfn5nx2SPvq_bsqguJMMr--fnzqZMOsAw" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/VXyG7VC.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
 
             <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/anapaulatoledo/" title="https://www.linkedin.com/in/anapaulatoledo/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/C4D03AQHRvU3ae_UWKw/profile-displayphoto-shrink_200_200/0/1525801430851?e=1672876800&v=beta&t=FAaSZQ1CLaYGC9Bfp7Xep2NezXABBd2D--Om48NGOek" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/FDMSxlu.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
 
             <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/brunaluz5/" title="https://www.linkedin.com/in/brunaluz5/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/D4D35AQEjlU0VW71Rtw/profile-framedphoto-shrink_200_200/0/1664228440547?e=1668099600&v=beta&t=FfW_1o4brTXiYezTiCoiGz9ekNSyyQzU-p4QFrz633A" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/VvB5I2x.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
           
@@ -43,22 +43,22 @@ function About(){
        <Box display="flex" justifyContent="center" gap={2}>
        <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/isabella-amantino-908520175/" title="https://www.linkedin.com/in/isabella-amantino-908520175/" target="_blank">
-                <img  className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/D4D35AQH7FfahRoPwHQ/profile-framedphoto-shrink_200_200/0/1666651075485?e=1668099600&v=beta&t=_QoEf5kn9_xzL4Yl_XQsNXJBe3XnAcOMHyKn_T_cJD8" alt="" width="200px" height="200px" />
+                <img  className='imagemPerfil' src="https://i.imgur.com/ElKpmEl.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
        <Typography className="cursorAbout">
                 <a href= "https://www.linkedin.com/in/ju-cruz/" title="https://www.linkedin.com/in/ju-cruz/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/D4D03AQEPPF6m7j9SaA/profile-displayphoto-shrink_100_100/0/1667318537049?e=1672876800&v=beta&t=0psmKBG4HbdGHI32k4ZuXCAkWzoxjP2Wjmi9X4vHB9Q" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/N78yBIK.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
        <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/julia-gali-barroso/" title="https://www.linkedin.com/in/julia-gali-barroso/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/C4D03AQFqRbBnq-IEvw/profile-displayphoto-shrink_400_400/0/1661873205193?e=1673481600&v=beta&t=_WFPwPTKgcSF6JhfrGAc3-EJ9kdnnh0d2IqqIrav_JE" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/qXgryjy.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
        <Typography className="cursorAbout">
                 <a href="https://www.linkedin.com/in/ncarvalhosilva/" title="https://www.linkedin.com/in/ncarvalhosilva/" target="_blank">
-                <img className='imagemPerfil' src="https://media-exp1.licdn.com/dms/image/D4D35AQFHIbZE-qjEJg/profile-framedphoto-shrink_800_800/0/1663700761135?e=1668099600&v=beta&t=4X5KUT6A9GUWWDq83l8qGwi_xUfqXYOdY40Hi9-5vkA" alt="" width="200px" height="200px" />
+                <img className='imagemPerfil' src="https://i.imgur.com/FCFumGj.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
             
