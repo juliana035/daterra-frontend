@@ -7,11 +7,6 @@
 }
 
 
-.imagemPerfil {
-    border-radius: 63% 37% 63% 37% / 75% 51% 49% 25%;
-    overflow: hidden;
-    border: 5px solid #457D58 ;
-}
 
 .textoAbout {
     width: 70vw;
