@@ -1,6 +1,6 @@
 import { AltRoute } from "@mui/icons-material";
 import React from "react";
-import AliceCarousel from "react-alice-carousel";
+import AliceCarousel from "react-alice-carousel"
 import "react-alice-carousel/lib/alice-carousel.css";
 import { ButtonBase, Grid, withWidth } from "@material-ui/core";
 import { Box, Typography } from "@mui/material";
@@ -9,17 +9,30 @@ import "./Home.css";
 
 function Home() {
   const items = [
+   
     <img
-      src="https://i.imgur.com/btCbj6o.png"
+    src="https://i.imgur.com/zfvhpM5.png"
+    alt=""
+    className="carouselImage"
+  />,
+      
+    <img
+      src="https://i.imgur.com/3u2DLWU.png"
       alt=""
       className="carouselImage"
     />,
 
     <img
-      src="https://i.imgur.com/n6718Fk.png"
+      src="https://i.imgur.com/A6Lzsow.png"
       alt=""
       className="carouselImage"
     />,
+
+    <img
+    src="https://i.imgur.com/rmZ5cVY.png"
+    alt=""
+    className="carouselImage"
+  />,
   ];
 
   const imagensProdutos = [
