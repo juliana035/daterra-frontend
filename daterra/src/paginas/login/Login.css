@@ -12,7 +12,6 @@
 }
 
 .loginCard {
-  color: #272727;
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -21,28 +20,51 @@
   align-items: center;
   padding: 1rem;
   background-color: #c9e265;
-  backdrop-filter: blur(5px);
+  opacity: 0.9;
   border-radius: 10px;
 }
 
-.loginIcone {
+.loginbox1{
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.loginIcone{
+  display:flex;
+  flex-direction: row;
+  width: 40px!important;
+  height: 40px!important;
   color: #457d58;
 }
 
+.loginTitulo{
+  font-family: 'Barlow', sans-serif !important;
+}
+
+.loginTexto{
+  font-family: 'Barlow', sans-serif !important;
+  padding: 1rem;
+}
+
 form {
-  font-size: 1rem sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 10px; 
 }
 
 .loginBotaoEntrar {
   justify-content: center;
   align-items: center;
-  color: #c9e265 !important; 
   background-color: #457d58!important;
+  border-radius: 5px;
+  font-family: 'Barlow', sans-serif !important;
+  color: #F6F6E9!important;
 }
 
 /* muda cor que aparece em "aqui!" */
@@ -50,9 +72,6 @@ form {
   color: #457d58;
 }
 
-.MuiInput-underline{
-    color: red !important;
-}
 /* muda cor do texto do formulario */
 .MuiFormLabel-colorPrimary {
   color: #272727 !important;

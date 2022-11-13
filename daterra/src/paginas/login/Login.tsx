@@ -1,4 +1,3 @@
-
 import { Button, Grid, Typography } from "@material-ui/core";
 import { Box, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,10 +22,10 @@ function Login() {
     token: ''
   })
 
-  function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+  function updatedModel(event: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -36,8 +35,8 @@ function Login() {
     }
   }, [token])
 
-  async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault();
+  async function logarUsuario(event: ChangeEvent<HTMLFormElement>) {
+    event.preventDefault();
     try {
       await login(`/usuarios/logar`, userLogin, setToken)
 
@@ -51,23 +50,25 @@ function Login() {
   return (
     <Grid container className="loginFundo">
       <Box className="loginCard">
-        <form onSubmit={onSubmit}>
-          <Typography variant="h3">
-            <LoginIcon className="loginIcone" />
-            Login
-          </Typography>
-          <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} label="Usuário (e-mail)" name="usuario" />
-          <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} label="Senha" name="senha" type="password" />
+        <form onSubmit={logarUsuario}>
+          <Box className='loginbox1'>
+          <LoginIcon className="loginIcone"/>
+            <Typography className='loginTitulo' variant="h4">
+              Login
+            </Typography>
+          </Box>
+          <TextField value={userLogin.usuario} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} label="Usuário (e-mail)" name="usuario" />
+          <TextField value={userLogin.senha} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} label="Senha" name="senha" type="password" />
 
-          <Box className="loginBotaoEntrar">
+          <Box >
             <Link to='/home' className="text-decorator-none">
-              <Button type="submit" variant="outlined">
+              <Button type="submit" variant="outlined" className="loginBotaoEntrar">
                 Entrar
               </Button>
             </Link>
           </Box>
         </form>
-        <Typography>
+        <Typography className='loginTexto'>
           Não tem uma conta? Cadastre-se <Link to='/cadastrousuario' className='loginLinkCadastro'>aqui</Link>!
         </Typography>
       </Box>
