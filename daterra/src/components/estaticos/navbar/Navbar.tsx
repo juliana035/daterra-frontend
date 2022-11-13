@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles';
@@ -21,8 +20,6 @@ const useStyles = makeStyles((theme: Theme) =>
     )
 );
 
-
-
 function Navbar() {
 
     const classes = useStyles();
@@ -40,46 +37,56 @@ function Navbar() {
                         </Box>
                         
                     </Box>
-                    <Box display="flex" alignItems="center"> 
+                    <Box className='navbarbox1'> 
                         
-                        <Box mx={1} className='cursor' display="flex" justifyContent="start" >
+                        <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
-                                <Link to='/about' className='text-decorator-none'>Quem Somos |</Link>
-                            </Typography>
+                                <Link to='/about' className='text-decorator-none'>
+                                    Quem Somos
+                                </Link>
+                            </Typography>                        
                         </Box>
+                        
+                        <Divider orientation="vertical" flexItem />
+
                         {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 Como Comprar |
                             </Typography>
                         </Box> */}
-                        <Box mx={1} className='cursor'  display="flex" justifyContent="start">
-                            <Typography variant="h6" className="corTexto tamTexto">
-                                Meu Perfil  |
+                        
+                        <Box mx={1} className='cursor'>
+                            <Typography className="corTexto tamTexto">
+                            Meu Perfil
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor' display="flex" justifyContent="start">
-                            <Typography variant="h6" className="corTextoProdutos tamTexto">
-                                Todos Produtos |
+                        <Divider orientation="vertical" flexItem />
+                        <Box mx={1} className='cursor'>
+                            <Typography className="corTextoProdutos tamTexto">
+                                Todos Produtos
                             </Typography>
                         </Box>
+                        <Divider orientation="vertical" flexItem />
                         {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 Cadastrar Produto |
                             </Typography>
                         </Box> */}
+                        
                         <Link to='/login' className='text-decorator-none'>
-                            <Box display="flex" mx={1} className='cursor'   justifyContent="start">
-                                <Typography variant="h6" className="corTexto tamTexto">
+                            <Box display="flex" mx={1} className='cursor'>
+                                <Typography className="corTexto tamTexto">
                                     Sair
                                 </Typography>
                             </Box>
                         </Link>
-                        <Box display="flex" className='cursor' justifyContent="start">
+                        
+                    </Box>
+                    <Box className='cursor'>
                             <Toolbar>
                                 <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={60} width={60} />
                             </Toolbar>
                         </Box>
-                    </Box>
                 </Toolbar>
             </AppBar>
         </>
