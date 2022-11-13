@@ -2,6 +2,8 @@
     width: 75vw;
     display: block;
     margin:  auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .carouselImage {
@@ -17,4 +19,8 @@
 
 .imagem {
     flex-direction: column
+}
+
+.bt-feira{
+    font-family: 'Barlow', sans-serif !important;
 }

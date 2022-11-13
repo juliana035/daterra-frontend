@@ -9,13 +9,13 @@ import "./Home.css";
 
 function Home() {
   const items = [
-   
+
     <img
-    src="https://i.imgur.com/zfvhpM5.png"
-    alt=""
-    className="carouselImage"
-  />,
-      
+      src="https://i.imgur.com/zfvhpM5.png"
+      alt=""
+      className="carouselImage"
+    />,
+
     <img
       src="https://i.imgur.com/3u2DLWU.png"
       alt=""
@@ -29,10 +29,10 @@ function Home() {
     />,
 
     <img
-    src="https://i.imgur.com/rmZ5cVY.png"
-    alt=""
-    className="carouselImage"
-  />,
+      src="https://i.imgur.com/rmZ5cVY.png"
+      alt=""
+      className="carouselImage"
+    />,
   ];
 
   const imagensProdutos = [
@@ -139,8 +139,8 @@ function Home() {
                 items={items}
                 infinite
                 autoPlay
-                autoPlayInterval={2000}
-                animationDuration={900}
+                autoPlayInterval={3000}
+                animationDuration={1000}
               />
             </div>
           </Box>

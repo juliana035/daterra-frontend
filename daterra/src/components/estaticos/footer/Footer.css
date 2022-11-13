@@ -10,6 +10,7 @@
     background-color:#457D58 !important;
     height: 30px;
     
+    
 }
 
 .redes{
@@ -22,6 +23,10 @@
 .bt-feira{
 background-color: #457D58 !important;
 color: #C9E265 !important;
+}
+
+.footerCopyright{
+    font-family: 'Barlow', sans-serif !important;
 }
 
 /* Footer
