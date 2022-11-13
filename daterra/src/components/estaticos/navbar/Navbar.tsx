@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import { Box, Button, Divider } from '@mui/material';
+import { Badge, Box, Button, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles';
@@ -31,22 +31,22 @@ function Navbar() {
                     <Box className={classes.title}>
                         <Box display="flex" justifyContent="space-between">
                             <Toolbar>
-                              <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
-                                
+                                <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
+
                             </Toolbar>
                         </Box>
-                        
+
                     </Box>
-                    <Box className='navbarbox1'> 
-                        
+                    <Box className='navbarbox1'>
+
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 <Link to='/about' className='text-decorator-none'>
                                     Quem Somos
                                 </Link>
-                            </Typography>                        
+                            </Typography>
                         </Box>
-                        
+
                         <Divider orientation="vertical" flexItem />
 
                         {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
@@ -54,10 +54,10 @@ function Navbar() {
                                 Como Comprar |
                             </Typography>
                         </Box> */}
-                        
+
                         <Box mx={1} className='cursor'>
                             <Typography className="corTexto tamTexto">
-                            Meu Perfil
+                                Meu Perfil
                             </Typography>
                         </Box>
                         <Divider orientation="vertical" flexItem />
@@ -72,7 +72,7 @@ function Navbar() {
                                 Cadastrar Produto |
                             </Typography>
                         </Box> */}
-                        
+
                         <Link to='/login' className='text-decorator-none'>
                             <Box display="flex" mx={1} className='cursor'>
                                 <Typography className="corTexto tamTexto">
@@ -80,13 +80,15 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        
+
                     </Box>
                     <Box className='cursor'>
-                            <Toolbar>
-                                <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={60} width={60} />
-                            </Toolbar>
-                        </Box>
+                        <Toolbar>
+                        <Badge showZero={true} badgeContent={0} color='primary' >
+                            <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={40} width={40} />
+                        </Badge>
+                        </Toolbar>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </>
