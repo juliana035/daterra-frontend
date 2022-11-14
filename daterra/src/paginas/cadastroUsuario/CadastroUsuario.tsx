@@ -69,7 +69,6 @@ function CadastroUsuario() {
         }
     }
 
-
     const [selectedValue, setSelectedValue] = React.useState('produtor');
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(event.target.value);
