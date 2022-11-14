@@ -96,7 +96,7 @@ function CadastroUsuario() {
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "dark",
+                theme: "light",
                 progress: undefined,
               });
               setUser({ ...user, senha:''});
