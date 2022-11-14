@@ -40,7 +40,7 @@ function Footer() {
                      
                     <Box className='box2'>
                         <Box>
-                        <Typography variant="subtitle2" align='center' >© 2022 Todos os Direitos Reservados  </Typography>
+                        <Typography variant="subtitle2" align='center' className='footerCopyright' >© 2022 Todos os Direitos Reservados  </Typography>
                         </Box>
                     </Box>
 

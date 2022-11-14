@@ -2,6 +2,8 @@
     width: 75vw;
     display: block;
     margin:  auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .carouselImage {
@@ -17,4 +19,54 @@
 
 .imagem {
     flex-direction: column
+}
+
+.homeMotivos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:3rem;
+}
+
+.homeMotivosBox{
+    display:flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeMotivosImagens{
+    height: 10rem;
+}
+
+.homeMotivosTexto{
+    font-family: 'Barlow', sans-serif !important;
+    color: #272727;
+}
+
+.homeComprePorCategoria{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.homeComprePorCategoriaTexto{
+    font-family: 'Barlow', sans-serif !important;
+    color: #272727;
+}
+
+.homeSacola1{
+    height: 7rem;
+}
+
+.homeSacola2{
+    height: 7rem;
+    transform: scaleX(-1);
 }
