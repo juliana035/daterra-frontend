@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../service/Service";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { toast } from "react-toastify";
 
 
 function CadastroUsuario() {
@@ -61,11 +62,45 @@ function CadastroUsuario() {
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if (confirmarSenha == user.senha) {
-            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            alert('Usuario cadastrado com sucesso')
-        } else {
-            alert('Dados inconsistentes. Por favor verifique as informações de cadastro.')
+        if (confirmarSenha === user.senha && user.senha.length>=8) {
+            try{
+                await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
+                toast.success("Usuário cadastrado com sucesso!", {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "light",
+                    progress: undefined,
+                  });
+            }catch(error){
+                toast.error("Falha interna ao cadastrar", {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "light",
+                    progress: undefined,
+                  });
+                  console.log(error);
+            }
+        }else{
+            toast.error("As senhas não conferem. Tente novamente.", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "dark",
+                progress: undefined,
+              });
+              setUser({ ...user, senha:''});
+              setConfirmarSenha('');
         }
     }
 
