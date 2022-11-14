@@ -145,17 +145,47 @@ function Home() {
             </div>
           </Box>
         </Grid>
+
         <Grid item xs={12}>
-          <Box display="flex" justifyContent="center" className="imagem">
-            <img src="https://i.imgur.com/wuRwySy.png" alt="" />
-            <img src="https://i.imgur.com/ET9WKpN.png" alt="" />
+          <Box className='homeMotivos'>
+            <Box className='homeMotivosBox'>
+              <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens'/>
+              <Typography className='homeMotivosTexto' variant='h5'>
+                consuma produtos orgânicos
+              </Typography>
+           </Box>
+            <Box className='homeMotivosBox'>
+              <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens'/>
+              <Typography className='homeMotivosTexto' variant='h5'>
+                incentive a agricultura familiar
+              </Typography>
+            </Box>
+
+            <Box className='homeMotivosBox'>
+              <img src='https://i.imgur.com/2maflsV.png' alt='símbolo de reciclagem' className='homeMotivosImagens' />
+              <Typography className='homeMotivosTexto' variant='h5'>
+                fortaleça a economia local
+              </Typography>
+            </Box>
+
+            <Box className='homeMotivosBox'>
+              <img src='https://i.imgur.com/PRprlxU.png' alt='saco de papel pardo' className='homeMotivosImagens' />
+              <Typography className='homeMotivosTexto' variant='h5'>
+                doe alimento de qualidade a quem precisa
+              </Typography>
+            </Box>
+          </Box>
+
+
+          <Box className='homeComprePorCategoria'>
+            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola1' />
+            <Typography className='homeComprePorCategoriaTexto' variant='h3'>COMPRE POR CATEGORIA</Typography>
+            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola2' />
           </Box>
         </Grid>
       </Grid>
 
-      <Box
-        sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
-      >
+      <Box className='homeBotoesCategorias'>
         {imagensProdutos.map((image) => (
           <ImageButton
             focusRipple
