@@ -3,16 +3,19 @@ import { Box, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import LoginIcon from '@mui/icons-material/Login';
 import React, { useState, ChangeEvent, useEffect } from "react";
-import useLocalStorage from "react-use-localstorage";
 import { login } from "../../service/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
 
 
 function Login() {
 
   let navigate = useNavigate();
-  const [token, setToken] = useLocalStorage('token');
+  const dispatch = useDispatch();
+  const [token, setToken] = useState('');
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
     nome: '',
@@ -21,6 +24,7 @@ function Login() {
     senha: '',
     token: ''
   })
+
 
   function updatedModel(event: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
@@ -31,18 +35,37 @@ function Login() {
 
   useEffect(() => {
     if (token != '') {
+      dispatch(addToken(token));
       navigate('/home')
     }
-  }, [token])
+  })
 
   async function logarUsuario(event: ChangeEvent<HTMLFormElement>) {
     event.preventDefault();
     try {
       await login(`/usuarios/logar`, userLogin, setToken)
 
-      alert('Usuário logado com sucesso!');
+      toast.success("Usuário logado com sucesso", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "light",
+        progress: undefined,
+      });
     } catch (error) {
-      alert('Dados do usuário inconsistentes. Erro ao logar!');
+      toast.error("Dados do usuário inconsistentes. Erro ao autenticar.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "light",
+        progress: undefined,
+      });
     }
   }
 
@@ -57,15 +80,23 @@ function Login() {
               Login
             </Typography>
           </Box>
-          <TextField value={userLogin.usuario} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} label="Usuário (e-mail)" name="usuario" />
-          <TextField value={userLogin.senha} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} label="Senha" name="senha" type="password" />
+          <TextField 
+          value={userLogin.usuario} 
+          onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+          label="Usuário (e-mail)" 
+          name="usuario" />
+          
+          <TextField 
+          value={userLogin.senha} 
+          onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+          label="Senha" 
+          name="senha" 
+          type="password" />
 
-          <Box >
-            <Link to='/home' className="text-decorator-none">
+          <Box >  
               <Button type="submit" variant="outlined" className="loginBotaoEntrar">
                 Entrar
               </Button>
-            </Link>
           </Box>
         </form>
         <Typography className='loginTexto'>
