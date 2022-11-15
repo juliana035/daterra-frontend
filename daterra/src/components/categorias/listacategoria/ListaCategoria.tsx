@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
-import './ListaCategproa.css';
+import './ListaCategoria.css';
 import {useNavigate} from 'react-router-dom';
 import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
