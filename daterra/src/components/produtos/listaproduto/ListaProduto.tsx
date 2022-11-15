@@ -7,7 +7,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import "./ListaPostagem.css";
+import "./ListaProduto.css";
 import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";

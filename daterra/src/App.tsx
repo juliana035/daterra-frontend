@@ -6,12 +6,19 @@ import Login from "./paginas/login/Login";
 import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
 import About from "./paginas/about/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import "./App.css";
+import ListaCategoria from "./components/categorias/listacategoria/ListaCategoria";
+import { Provider } from 'react-redux';
+import store from "./store/store";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import ListaProduto from "./components/produtos/listaproduto/ListaProduto";
 
 function App() {
 
   return (
+    <Provider store={store}>
+      <ToastContainer />
     <Router>
       <Navbar />
       <div style={{ minHeight: '100vh' }}>
@@ -21,11 +28,13 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           <Route path="/about"  element={<About />}/>
-
+          <Route path="/produtos"  element={<ListaProduto />}/>
+          <Route path="/categorias"  element={<ListaCategoria />}/>
         </Routes>
       </div>
       <Footer />
     </Router>
+    </Provider>
   );
 
 
