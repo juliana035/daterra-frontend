@@ -6,6 +6,7 @@ import { ButtonBase, Grid, withWidth } from "@material-ui/core";
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const items = [
@@ -40,21 +41,26 @@ function Home() {
       url: "https://i.imgur.com/EE10Xvu.jpg",
       title: "Todos os produtos",
       width: "25%",
+      link: '/produtos'
+     
     },
     {
       url: "https://i.imgur.com/7cpPXMt.jpg",
       title: "Frutas",
       width: "25%",
+      link: '/frutas'
     },
     {
       url: "https://i.imgur.com/RpuboTX.jpg",
       title: "Legumes",
       width: "25%",
+      link: '/legumes'
     },
     {
       url: "https://imgur.com/WPL0CxG",
       title: "Verduras",
       width: "25%",
+      link: '/verduras'
     },
   ];
 
@@ -187,6 +193,7 @@ function Home() {
 
       <Box className='homeBotoesCategorias'>
         {imagensProdutos.map((image) => (
+          <Link to ={image.link}>
           <ImageButton
             focusRipple
             key={image.title}
@@ -214,6 +221,7 @@ function Home() {
               </Typography>
             </Image>
           </ImageButton>
+          </Link>
         ))}
       </Box>
     </>
