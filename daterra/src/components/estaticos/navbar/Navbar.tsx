@@ -54,7 +54,8 @@ function Navbar() {
       var navbarComponent;
 
     if (token !==''){
-        navbarComponent = (<AppBar position="static">
+        navbarComponent = (
+        <AppBar position="static">
         <Toolbar variant="dense" className='corFundo'  >
             <Box className={classes.title}>
                 <Box display="flex" justifyContent="space-between">
@@ -119,8 +120,8 @@ function Navbar() {
             </Box>
         </Toolbar>
     </AppBar>
-
-        )
+        );
+        
     }
 
     return (
