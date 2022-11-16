@@ -13,6 +13,10 @@ import store from "./store/store";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ListaProduto from "./components/produtos/listaproduto/ListaProduto";
+import CadastroCategoria from "./components/categorias/cadastroCategoria/CadastroCategoria";
+import CadastroProduto from "./components/produtos/cadastroProduto/CadastroProduto";
+import DeletarCategoria from "./components/categorias/deletarCategoria/DeletarCategoria";
+import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 
 function App() {
 
@@ -30,6 +34,12 @@ function App() {
           <Route path="/about"  element={<About />}/>
           <Route path="/produtos"  element={<ListaProduto />}/>
           <Route path="/categorias"  element={<ListaCategoria />}/>
+          <Route path="/formularioProduto/"  element={<CadastroProduto/>}/>
+          <Route path="/formularioCategorias/"  element={<CadastroCategoria/>}/>
+          <Route path="/formularioProduto/:id"  element={<CadastroProduto/>}/>
+          <Route path="/formularioCategorias/:id"  element={<CadastroCategoria/>}/>
+          <Route path="/deletarCategoria/:id"  element={<DeletarCategoria />}/>
+          <Route path="/deletarProduto/:id"  element={<DeletarProduto />}/>
         </Routes>
       </div>
       <Footer />

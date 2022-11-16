@@ -92,7 +92,9 @@ function Navbar() {
                 <Divider orientation="vertical" flexItem />
                 <Box mx={1} className='cursor'>
                     <Typography className="corTextoProdutos tamTexto">
+                        <Link to='/produtos' className='text-decorator-none'>
                         Todos Produtos
+                        </Link>
                     </Typography>
                 </Box>
                 <Divider orientation="vertical" flexItem />

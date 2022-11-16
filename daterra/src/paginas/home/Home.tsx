@@ -40,6 +40,7 @@ function Home() {
       url: "https://i.imgur.com/EE10Xvu.jpg",
       title: "Todos os produtos",
       width: "25%",
+     
     },
     {
       url: "https://i.imgur.com/7cpPXMt.jpg",
