@@ -12,8 +12,8 @@
 }
 
 .color {
-    background-color: #F6F6E9
-    ;
+    background-color: #F6F6E9;
+    
 }
 
 .imagem {
@@ -69,3 +69,22 @@
     height: 7rem;
     transform: scaleX(-1);
 }
+
+.homeBotoesCategorias{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.homeBotoesCategoriasLink{
+    width: 350px;
+}
+
+.backgroundBotoes{
+    background-color: #F6F6E9;
+}
+
