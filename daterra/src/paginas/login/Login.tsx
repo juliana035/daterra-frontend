@@ -38,7 +38,7 @@ function Login() {
       dispatch(addToken(token));
       navigate('/home')
     }
-  })
+  },[token]);
 
   async function logarUsuario(event: ChangeEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -83,12 +83,14 @@ function Login() {
           <TextField 
           value={userLogin.usuario} 
           onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+          id='usuario'
           label="Usuário (e-mail)" 
           name="usuario" />
           
           <TextField 
           value={userLogin.senha} 
           onChange={(event: ChangeEvent<HTMLInputElement>) => updatedModel(event)} 
+          id='senha'
           label="Senha" 
           name="senha" 
           type="password" />
