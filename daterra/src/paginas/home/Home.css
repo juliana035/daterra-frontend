@@ -69,3 +69,16 @@
     height: 7rem;
     transform: scaleX(-1);
 }
+
+.homeBotoesCategorias{
+    display: flex;
+    flex-wrap: wrap;
+    width: 55vw;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.homeBotoesCategoriasLink{
+    width: 350px;
+}

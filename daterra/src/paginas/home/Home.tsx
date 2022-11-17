@@ -40,26 +40,26 @@ function Home() {
     {
       url: "https://i.imgur.com/EE10Xvu.jpg",
       title: "Todos os produtos",
-      width: "25%",
+      width: "100%",
       link: '/produtos'
      
     },
     {
       url: "https://i.imgur.com/7cpPXMt.jpg",
       title: "Frutas",
-      width: "25%",
+      width: "100%",
       link: '/frutas'
     },
     {
       url: "https://i.imgur.com/RpuboTX.jpg",
       title: "Legumes",
-      width: "25%",
+      width: "100%",
       link: '/legumes'
     },
     {
-      url: "https://imgur.com/WPL0CxG",
+      url: "https://imgur.com/WPL0CxG.jpg",
       title: "Verduras",
-      width: "25%",
+      width: "100%",
       link: '/verduras'
     },
   ];
@@ -193,7 +193,7 @@ function Home() {
 
       <Box className='homeBotoesCategorias'>
         {imagensProdutos.map((image) => (
-          <Link to ={image.link}>
+          <Link to ={image.link} className='homeBotoesCategoriasLink'>
           <ImageButton
             focusRipple
             key={image.title}
