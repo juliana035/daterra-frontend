@@ -42,7 +42,6 @@ function Home() {
       title: "Todos os produtos",
       width: "100%",
       link: '/produtos'
-     
     },
     {
       url: "https://i.imgur.com/7cpPXMt.jpg",
@@ -57,7 +56,11 @@ function Home() {
       link: '/legumes'
     },
     {
+<<<<<<< HEAD
       url: "https://imgur.com/WPL0CxG.jpg",
+=======
+      url: "https://i.imgur.com/WPL0CxG.jpg",
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
       title: "Verduras",
       width: "100%",
       link: '/verduras'
@@ -191,14 +194,19 @@ function Home() {
         </Grid>
       </Grid>
 
+      <Box className="backgroundBotoes">
       <Box className='homeBotoesCategorias'>
         {imagensProdutos.map((image) => (
+<<<<<<< HEAD
           <Link to ={image.link} className='homeBotoesCategoriasLink'>
+=======
+          <Link to ={image.link} className="homeBotoesCategoriasLink">
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
           <ImageButton
             focusRipple
             key={image.title}
             style={{
-              width: image.width,
+              width: image.width
             }}
           >
             <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
@@ -223,6 +231,7 @@ function Home() {
           </ImageButton>
           </Link>
         ))}
+      </Box>
       </Box>
     </>
   );

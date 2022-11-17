@@ -12,8 +12,8 @@
 }
 
 .color {
-    background-color: #F6F6E9
-    ;
+    background-color: #F6F6E9;
+    
 }
 
 .imagem {
@@ -73,12 +73,29 @@
 .homeBotoesCategorias{
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     width: 55vw;
     gap: 1rem;
     margin: 0 auto;
     justify-content: center;
+=======
+    width: 70vw;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
 }
 
 .homeBotoesCategoriasLink{
     width: 350px;
+<<<<<<< HEAD
 }
+=======
+}
+
+.backgroundBotoes{
+    background-color: #F6F6E9;
+}
+
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
