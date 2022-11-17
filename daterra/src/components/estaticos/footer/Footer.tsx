@@ -7,12 +7,14 @@ import {Box} from '@mui/material';
 import "./Footer.css";
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const token = useSelector<TokenState,TokenState['tokens']>(
         (state) => state.tokens
     );
     
+
     return (
         <>
         {
@@ -32,9 +34,11 @@ function Footer() {
                         <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank" rel="noopener noreferrer">
                             <LinkedInIcon className='redes'/>
                         </a>
+                        <Link to= '/produtos' className='text-decorator-none'>
                         <Button type='submit' variant='contained' className='bt-feira'>
                                 IR PARA FEIRINHA
                             </Button>
+                        </Link> 
                     </Box>
 
                         
@@ -53,9 +57,9 @@ function Footer() {
         </>
             
 
-    )
-
+    );
 }
+
 
 export default Footer;
 

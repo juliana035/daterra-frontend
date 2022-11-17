@@ -56,7 +56,11 @@ function Home() {
       link: '/legumes'
     },
     {
+<<<<<<< HEAD
+      url: "https://imgur.com/WPL0CxG.jpg",
+=======
       url: "https://i.imgur.com/WPL0CxG.jpg",
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
       title: "Verduras",
       width: "100%",
       link: '/verduras'
@@ -193,7 +197,11 @@ function Home() {
       <Box className="backgroundBotoes">
       <Box className='homeBotoesCategorias'>
         {imagensProdutos.map((image) => (
+<<<<<<< HEAD
+          <Link to ={image.link} className='homeBotoesCategoriasLink'>
+=======
           <Link to ={image.link} className="homeBotoesCategoriasLink">
+>>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
           <ImageButton
             focusRipple
             key={image.title}
