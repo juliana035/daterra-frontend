@@ -9,7 +9,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const items = [
+  const banner = [
 
     <img
       src="https://i.imgur.com/zfvhpM5.png"
@@ -56,11 +56,7 @@ function Home() {
       link: '/legumes'
     },
     {
-<<<<<<< HEAD
-      url: "https://imgur.com/WPL0CxG.jpg",
-=======
       url: "https://i.imgur.com/WPL0CxG.jpg",
->>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
       title: "Verduras",
       width: "100%",
       link: '/verduras'
@@ -131,6 +127,58 @@ function Home() {
     transition: theme.transitions.create("opacity"),
   }));
 
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 4 },
+};
+
+  const items = [
+
+    
+    <img
+    src="https://i.imgur.com/MQ90zHw.png"
+    alt="logo Lazyrit"
+    className="carouselImageEmpresas"
+    data-value="1"/>,
+    
+    <img
+      src="https://i.imgur.com/w4Uogoe.png"
+      alt="Logo Beef Steak"
+      className="carouselImageEmpresas"
+      data-value="2"
+    />,
+
+    <img
+      src="https://i.imgur.com/ShL1Ru4.png"
+      alt="Logo Crococo"
+      className="carouselImageEmpresas"
+      data-value="3"
+    />,
+
+    <img
+      src="https://i.imgur.com/gTwetPS.png"
+      alt="Logo High Technology"
+      className="carouselImageEmpresas"
+      data-value="4"
+    />,
+
+    <img
+      src="https://i.imgur.com/S3WbX5G.png"
+      alt="Logo Pelican"
+      className="carouselImageEmpresas"
+      data-value="5"
+    />,
+
+    <img
+      src="https://i.imgur.com/2Hrp36j.jpg"
+      alt="Logo Air Down"
+      className="carouselImageEmpresas"
+      data-value="6"
+    />,
+
+  ];
+
   return (
     <>
       <Grid
@@ -145,7 +193,7 @@ function Home() {
             <div className="carousel">
               <AliceCarousel
                 mouseTracking
-                items={items}
+                items={banner}
                 infinite
                 autoPlay
                 autoPlayInterval={3000}
@@ -158,13 +206,13 @@ function Home() {
         <Grid item xs={12}>
           <Box className='homeMotivos'>
             <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens'/>
+              <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens' />
               <Typography className='homeMotivosTexto' variant='h5'>
                 consuma produtos orgânicos
               </Typography>
-           </Box>
+            </Box>
             <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens'/>
+              <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens' />
               <Typography className='homeMotivosTexto' variant='h5'>
                 incentive a agricultura familiar
               </Typography>
@@ -195,44 +243,79 @@ function Home() {
       </Grid>
 
       <Box className="backgroundBotoes">
-      <Box className='homeBotoesCategorias'>
-        {imagensProdutos.map((image) => (
-<<<<<<< HEAD
-          <Link to ={image.link} className='homeBotoesCategoriasLink'>
-=======
-          <Link to ={image.link} className="homeBotoesCategoriasLink">
->>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
-          <ImageButton
-            focusRipple
-            key={image.title}
-            style={{
-              width: image.width
-            }}
-          >
-            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-            <ImageBackdrop className="MuiImageBackdrop-root" />
-            <Image>
-              <Typography
-                component="span"
-                variant="h4"
-                color="inherit"
-                sx={{
-                  position: "relative",
-                  p: 4,
-                  pt: 2,
-                  pb: (theme: { spacing: (arg0: number) => any }) =>
-                    `calc(${theme.spacing(1)} + 6px)`,
+        <Box className='homeBotoesCategorias'>
+          {imagensProdutos.map((image) => (
+            <Link to={image.link} className='homeBotoesCategoriasLink'>
+              <ImageButton
+                focusRipple
+                key={image.title}
+                style={{
+                  width: image.width
                 }}
               >
-                {image.title}
-                <ImageMarked className="MuiImageMarked-root" />
-              </Typography>
-            </Image>
-          </ImageButton>
-          </Link>
-        ))}
+                <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="h4"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme: { spacing: (arg0: number) => any }) =>
+                        `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    {image.title}
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+              </ImageButton>
+            </Link>
+          ))}
+        </Box>
+
+        <Box>
+          <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='comoComprar-img' />
+        </Box>
+
+        <Box className='comoDoar-img'>
+          <img src='https://i.imgur.com/D4tqIzM.png' alt='como doar' />
+        </Box>
+
+        <Box>
+          <img src='https://i.imgur.com/YvdaHOS.png' alt='empresas que consomem produtos Da terra' className='comoComprar-img' />
+        </Box>
+
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          className="color"
+          
+        >
+          <Grid alignItems="center" item xs={12}>
+            <Box>
+              <div className="carouselEmpresas">
+                <AliceCarousel
+                  mouseTracking
+                  items={items}
+                  responsive={responsive}
+                  infinite
+                  autoPlay
+                  autoPlayInterval={3000}
+                  animationDuration={1000}
+                />
+              </div>
+            </Box>
+          </Grid>
+        </Grid>
+
       </Box>
-      </Box>
+
     </>
   );
 }

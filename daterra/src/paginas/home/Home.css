@@ -7,7 +7,6 @@
 
 .carouselImage {
     width: 100%;
-    
     object-fit: cover;
 }
 
@@ -73,29 +72,49 @@
 .homeBotoesCategorias{
     display: flex;
     flex-wrap: wrap;
-<<<<<<< HEAD
     width: 55vw;
     gap: 1rem;
     margin: 0 auto;
     justify-content: center;
-=======
-    width: 70vw;
-    gap: 1rem;
-    margin: 0 auto;
-    justify-content: center;
-
->>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
 }
 
 .homeBotoesCategoriasLink{
     width: 350px;
-<<<<<<< HEAD
-}
-=======
 }
 
 .backgroundBotoes{
     background-color: #F6F6E9;
 }
 
->>>>>>> c65e53d671ec635da8c811a65361463e18616fe5
+.comoComprar-img{
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.comoDoar-img{
+    margin-top: 50px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carouselImageEmpresas{
+    width: 70%;
+    object-fit: cover;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style:outset;
+    border-color: #457D58;
+    
+    
+}
+
+.carouselEmpresas {
+    width: 60vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
