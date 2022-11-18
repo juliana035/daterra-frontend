@@ -130,8 +130,6 @@ function ListaProduto() {
       </li>
       
     </ul>
-
-
      {produtos.length===0 &&<span className="loader"></span>}
       {produtos.map((produto) => (
         <Box m={2}>
