@@ -39,91 +39,107 @@ function Navbar() {
     function goLogout() {
         dispatch(addToken(""));
         toast.info("Usuário deslogado", {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: "light",
-          progress: undefined,
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "light",
+            progress: undefined,
         });
         navigate("/login");
-      }
+    }
 
-      var navbarComponent;
+    var navbarComponent;
 
-    if (token !==''){
+    if (token !== '') {
         navbarComponent = (
-        <AppBar position="static">
-        <Toolbar variant="dense" className='corFundo'  >
-            <Box className={classes.title}>
-                <Box display="flex" justifyContent="space-between">
-                    <Toolbar>
-                        <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
+            <AppBar position="static">
+                <Toolbar variant="dense" className='corFundo'  >
+                    <Box className={classes.title}>
+                        <Box display="flex" justifyContent="space-between">
+                            <Toolbar>
+                                <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
 
-                    </Toolbar>
-                </Box>
+                            </Toolbar>
+                        </Box>
 
-            </Box>
-            <Box className='navbarbox1'>
-
-                <Box mx={1} className='cursor'>
-                    <Typography variant="h6" className="corTexto tamTexto">
-                        <Link to='/about' className='text-decorator-none'>
-                            Quem Somos
+                    </Box>
+                    <Box className='navbarbox1'>
+                        <Link to="/formularioCategoria" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" className="corTexto tamTexto">
+                                    Cadastrar Categoria
+                                </Typography>
+                            </Box>
                         </Link>
-                    </Typography>
-                </Box>
+                        <Divider orientation="vertical" flexItem />
+                        <Link to="/formularioProduto" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" className="corTexto tamTexto">
+                                    Cadastrar Produto
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Divider orientation="vertical" flexItem />
 
-                <Divider orientation="vertical" flexItem />
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" className="corTexto tamTexto">
+                                <Link to='/about' className='text-decorator-none'>
+                                    Quem Somos
+                                </Link>
+                            </Typography>
+                        </Box>
 
-                {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        <Divider orientation="vertical" flexItem />
+
+                        {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                     <Typography variant="h6" className="corTexto tamTexto">
                         Como Comprar |
                     </Typography>
                 </Box> */}
 
-                <Box mx={1} className='cursor'>
-                    <Typography className="corTexto tamTexto">
-                        Meu Perfil
-                    </Typography>
-                </Box>
-                <Divider orientation="vertical" flexItem />
-                <Box mx={1} className='cursor'>
-                    <Typography className="corTextoProdutos tamTexto">
-                        <Link to='/produtos' className='text-decorator-none'>
-                        Todos Produtos
-                        </Link>
-                    </Typography>
-                </Box>
-                <Divider orientation="vertical" flexItem />
-                {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                        <Box mx={1} className='cursor'>
+                            <Typography className="corTexto tamTexto">
+                                Meu Perfil
+                            </Typography>
+                        </Box>
+                        <Divider orientation="vertical" flexItem />
+                        <Box mx={1} className='cursor'>
+                            <Typography className="corTextoProdutos tamTexto">
+                                <Link to='/produtos' className='text-decorator-none'>
+                                    Todos Produtos
+                                </Link>
+                            </Typography>
+                        </Box>
+                        <Divider orientation="vertical" flexItem />
+                        {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                     <Typography variant="h6" className="corTexto tamTexto">
                         Cadastrar Produto |
                     </Typography>
                 </Box> */}
 
-                <Link to='/login' className='text-decorator-none'>
-                    <Box display="flex" mx={1} className='cursor'>
-                        <Typography className="corTexto tamTexto">
-                            Sair
-                        </Typography>
-                    </Box>
-                </Link>
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box display="flex" mx={1} className='cursor'>
+                                <Typography className="corTexto tamTexto">
+                                    Sair
+                                </Typography>
+                            </Box>
+                        </Link>
 
-            </Box>
-            <Box className='cursor'>
-                <Toolbar>
-                    <Badge showZero={true} badgeContent={0} color='primary' >
-                        <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={40} width={40} />
-                    </Badge>
+                    </Box>
+                    <Box className='cursor'>
+                        <Toolbar>
+                            <Badge showZero={true} badgeContent={0} color='primary' >
+                                <img src="https://i.imgur.com/OQRGLtB.png" alt="sacola de compras" height={40} width={40} />
+                            </Badge>
+                        </Toolbar>
+                    </Box>
                 </Toolbar>
-            </Box>
-        </Toolbar>
-    </AppBar>
+            </AppBar>
         );
-        
+
     }
 
     return (

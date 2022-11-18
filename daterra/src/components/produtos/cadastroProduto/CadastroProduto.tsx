@@ -73,7 +73,7 @@ function CadastroProduto() {
   }, [id]);
 
   async function getCategorias() {
-    await busca("/categorias/all", setCategorias, {
+    await busca("/categoria/all", setCategorias, {
       headers: {
         Authorization: token,
       },
@@ -222,7 +222,7 @@ function CadastroProduto() {
             labelId="categoriaSelect"
             id="categoria"
             onChange={(event) =>
-              buscaId(`/categorias/${event.target.value}`, setCategoria, {
+              buscaId(`/categoria/${event.target.value}`, setCategoria, {
                 headers: {
                   Authorization: token,
                 },
