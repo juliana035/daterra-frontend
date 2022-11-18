@@ -37,6 +37,7 @@ function Login() {
     if (token != '') {
       dispatch(addToken(token));
       navigate('/home')
+      console.log(token)
     }
   },[token]);
 
@@ -44,6 +45,7 @@ function Login() {
     event.preventDefault();
     try {
       await login(`/usuarios/logar`, userLogin, setToken)
+      
 
       toast.success("Usuário logado com sucesso", {
         position: "top-right",
