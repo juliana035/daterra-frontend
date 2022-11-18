@@ -9,7 +9,7 @@ function UnicoCategoria(){
 const[categoria,setCategoria] = useState<Categoria>({
     id:0,
     tipo:'',
-    produtos: null
+    produto: null
 })
 
 const {id} = useParams<{id:string}>();
