@@ -45,11 +45,10 @@ function UnicoCategoria(){
             <div className="nomeProduto"> {produto.nome} </div>
             <div className="valores"> 
             <div className="Produtoestoquepreco"> 
-              <span>{produto.descricao}</span> 
-              <span>{produto.quantidade}</span> 
-              <span>{produto.preco}</span>
+            <span>{produto.preco}</span>
+            <span>{produto.descricao}</span> 
             </div>
-            <button className ="button"> <span> - </span> <span> 0 </span> <span> + </span>
+            <button className ="button"> <span> -  </span> <span> 0  </span> <span>  + </span>
             </button>
             </div>
                 </div>
