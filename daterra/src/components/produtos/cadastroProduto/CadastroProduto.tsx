@@ -18,6 +18,7 @@ import { toast } from "react-toastify";
 import Categoria from "../../../models/Categoria";
 import Produto from "../../../models/Produto";
 import { busca, buscaId, post, put } from "../../../service/Service";
+import User from "../../../models/User";
 
 function CadastroProduto() {
   let navigate = useNavigate();
@@ -25,6 +26,10 @@ function CadastroProduto() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
+  );
+
+  const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+    (state) => state.tipoUser
   );
 
   useEffect(() => {
@@ -56,12 +61,26 @@ function CadastroProduto() {
     foto: "", 
     quantidade: 0,
     categoria: null,
+    usuario: null
+  });
+
+  const [usuario, setUsuario] = useState<User>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    tipoUser: tipoUser,
+    cep: '',
+    cpf: '',
+    cpnj: '',
+    foto: '',
+    senha: ''
   });
 
   useEffect(() => {
     setProduto({
       ...produto,
       categoria: categoria,
+      usuario: usuario //adicionar o usuário dentro da postagem
     });
   }, [categoria]);
 
