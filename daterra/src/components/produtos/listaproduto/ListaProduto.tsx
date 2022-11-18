@@ -25,6 +25,10 @@ function ListaProduto() {
     (state) => state.tokens
   );
 
+  const tipoUser = useSelector<TokenState, TokenState['tipoUser']>(
+    (state) => state.id
+  )
+
   useEffect(() => {
     if (token == "") {
       toast.error("Você precisa estar logado", {
