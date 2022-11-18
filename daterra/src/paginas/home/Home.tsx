@@ -1,6 +1,6 @@
 import { AltRoute } from "@mui/icons-material";
 import React from "react";
-import AliceCarousel from "react-alice-carousel"
+import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { ButtonBase, Grid, withWidth } from "@material-ui/core";
 import { Box, Typography } from "@mui/material";
@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const banner = [
-
     <img
       src="https://i.imgur.com/zfvhpM5.png"
       alt=""
@@ -41,25 +40,25 @@ function Home() {
       url: "https://i.imgur.com/EE10Xvu.jpg",
       title: "Todos os produtos",
       width: "100%",
-      link: '/produtos'
+      link: "/produtos",
     },
     {
       url: "https://i.imgur.com/7cpPXMt.jpg",
       title: "Frutas",
       width: "100%",
-      link: '/frutas'
+      link: "/frutas",
     },
     {
       url: "https://i.imgur.com/RpuboTX.jpg",
       title: "Legumes",
       width: "100%",
-      link: '/legumes'
+      link: "/legumes",
     },
     {
       url: "https://i.imgur.com/WPL0CxG.jpg",
       title: "Verduras",
       width: "100%",
-      link: '/verduras'
+      link: "/verduras",
     },
   ];
 
@@ -131,17 +130,16 @@ function Home() {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 4 },
-};
+  };
 
   const items = [
-
-    
     <img
-    src="https://i.imgur.com/MQ90zHw.png"
-    alt="logo Lazyrit"
-    className="carouselImageEmpresas"
-    data-value="1"/>,
-    
+      src="https://i.imgur.com/MQ90zHw.png"
+      alt="logo Lazyrit"
+      className="carouselImageEmpresas"
+      data-value="1"
+    />,
+
     <img
       src="https://i.imgur.com/w4Uogoe.png"
       alt="Logo Beef Steak"
@@ -176,7 +174,6 @@ function Home() {
       className="carouselImageEmpresas"
       data-value="6"
     />,
-
   ];
 
   return (
@@ -204,53 +201,78 @@ function Home() {
         </Grid>
 
         <Grid item xs={12}>
-          <Box className='homeMotivos'>
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
+          <Box className="homeMotivos">
+            <Box className="homeMotivosBox">
+              <img
+                src="https://i.imgur.com/9wWGF5i.png"
+                alt="ramo com folhas"
+                className="homeMotivosImagens"
+              />
+              <Typography className="homeMotivosTexto" variant="h5">
                 consuma produtos orgânicos
               </Typography>
             </Box>
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
+            <Box className="homeMotivosBox">
+              <img
+                src="https://i.imgur.com/SC8IWob.png"
+                alt="pá de jardinagem"
+                className="homeMotivosImagens"
+              />
+              <Typography className="homeMotivosTexto" variant="h5">
                 incentive a agricultura familiar
               </Typography>
             </Box>
 
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/2maflsV.png' alt='símbolo de reciclagem' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
+            <Box className="homeMotivosBox">
+              <img
+                src="https://i.imgur.com/2maflsV.png"
+                alt="símbolo de reciclagem"
+                className="homeMotivosImagens"
+              />
+              <Typography className="homeMotivosTexto" variant="h5">
                 fortaleça a economia local
               </Typography>
             </Box>
 
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/PRprlxU.png' alt='saco de papel pardo' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
+            <Box className="homeMotivosBox">
+              <img
+                src="https://i.imgur.com/PRprlxU.png"
+                alt="saco de papel pardo"
+                className="homeMotivosImagens"
+              />
+              <Typography className="homeMotivosTexto" variant="h5">
                 doe alimento de qualidade a quem precisa
               </Typography>
             </Box>
           </Box>
 
-
-          <Box className='homeComprePorCategoria'>
-            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola1' />
-            <Typography className='homeComprePorCategoriaTexto' variant='h3'>COMPRE POR CATEGORIA</Typography>
-            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola2' />
+          <Box className="homeComprePorCategoria">
+            <img
+              src="https://i.imgur.com/HBK3pHv.png"
+              alt="desenho de uma sacola de compras"
+              className="homeSacola1"
+            />
+            <Typography className="homeComprePorCategoriaTexto" variant="h3">
+              COMPRE POR CATEGORIA
+            </Typography>
+            <img
+              src="https://i.imgur.com/HBK3pHv.png"
+              alt="desenho de uma sacola de compras"
+              className="homeSacola2"
+            />
           </Box>
         </Grid>
       </Grid>
 
       <Box className="backgroundBotoes">
-        <Box className='homeBotoesCategorias'>
+        <Box className="homeBotoesCategorias">
           {imagensProdutos.map((image) => (
-            <Link to={image.link} className='homeBotoesCategoriasLink'>
+            <Link to={image.link} className="homeBotoesCategoriasLink">
               <ImageButton
                 focusRipple
                 key={image.title}
                 style={{
-                  width: image.width
+                  width: image.width,
                 }}
               >
                 <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
@@ -276,17 +298,44 @@ function Home() {
             </Link>
           ))}
         </Box>
-
         <Box>
-          <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='comoComprar-img' />
+          <Box className="homeComoComprar1">
+            Como{" "}
+            <img
+              src="https://i.imgur.com/U7Qe7QW.png"
+              alt="desenho de pegadas de pé" className="homeComoComprarImg"
+            />{" "}
+            comprar:
+            {/* <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='comoComprar-img' /> */}
+          </Box>
+          <div className='homeComoComprarStepper'>
+          <img  className='homeComoComprarStepperIMG'src="https://i.imgur.com/uPanCPo.png" alt="1.Você faz seu pedido até quarta-feira, 2.O produtor colhe e prepara tudo fresquinho, 3.Você recebe sua feirinha em casa quinta-feira" />
+          </div>
+          
+          {/* <Box className='homeComoComprar2'>
+            <Box className="homeComoComprarTexto">Você faz seu pedido até quarta-feira</Box>
+            <Box className="homeComoComprarTexto">Os produtores colhem e preparam tudo fresquinho</Box>
+            <Box className="homeComoComprarTexto">Você recebe sua feirinha em casa quinta-feira</Box>
+
+          </Box> */}
         </Box>
 
-        <Box className='comoDoar-img'>
-          <img src='https://i.imgur.com/D4tqIzM.png' alt='como doar' />
+        <Box className="comoDoar-img">
+          <img src="https://i.imgur.com/D4tqIzM.png" alt="como doar" />
         </Box>
 
-        <Box>
-          <img src='https://i.imgur.com/YvdaHOS.png' alt='empresas que consomem produtos Da terra' className='comoComprar-img' />
+        <Box className="homeEmpresas">
+          <img
+            src="https://i.imgur.com/X0A7QVz.png"
+            className="homePlanetaVerde"
+            alt="Desenho do planeta Terra verde"
+          />
+          <h2>Empresas que consomem produtos Da terra</h2>
+          <img
+            src="https://i.imgur.com/X0A7QVz.png"
+            className="homePlanetaVerde"
+            alt="Desenho do planeta Terra verde"
+          />
         </Box>
 
         <Grid
@@ -295,7 +344,6 @@ function Home() {
           justifyContent="center"
           alignItems="center"
           className="color"
-          
         >
           <Grid alignItems="center" item xs={12}>
             <Box>
@@ -313,9 +361,7 @@ function Home() {
             </Box>
           </Grid>
         </Grid>
-
       </Box>
-
     </>
   );
 }
