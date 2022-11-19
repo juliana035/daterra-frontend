@@ -61,8 +61,7 @@ function About(){
                 <img className='imagemPerfil' src="https://i.imgur.com/FCFumGj.png" alt="" width="200px" height="200px" />
                 </a>
             </Typography>
-            
-            
+                      
        </Box>
        <br/>
        <br/>
