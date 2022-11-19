@@ -1,6 +1,7 @@
 import { Action } from './actions'
 
 export interface TokenState {
+    id: string
     tokens: string,
     tipoUser: string
 }

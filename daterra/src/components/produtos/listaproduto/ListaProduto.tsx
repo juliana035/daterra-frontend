@@ -21,7 +21,7 @@ function ListaProduto() {
 
   const tipoUser = useSelector<TokenState, TokenState['tipoUser']>(
     (state) => state.id
-  )
+  );
 
   useEffect(() => {
     if (token == "") {
