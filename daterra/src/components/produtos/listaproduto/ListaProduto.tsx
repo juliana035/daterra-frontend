@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  Card,
-  CardActions,
-  CardContent,
-  Button,
-  Typography,
-} from "@material-ui/core";
+import {  Card,  CardActions,  CardContent,  Button,  Typography,} from "@material-ui/core";
 import "./ListaProduto.css";
 import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
@@ -135,8 +129,21 @@ function ListaProduto() {
       
     </ul>
      {produtos.length===0 &&<span className="loader"></span>}
-      {produtos.map((produto) => (
-        <Box m={2}>
+     <div style= {{display:"flex" , justifyContent:"center"}}>
+     {produtos.map((produto) => (
+       <div className="container">
+       <div className="imageContainer"><img src={produto.foto} alt="" /></div>
+       <div className="nomeProduto"> {produto.nome} </div>
+       <div className="valores"> 
+       <div className="Produtoestoquepreco"> 
+       <span>{produto.preco}</span>
+       <span>{produto.descricao}</span> 
+       </div>
+       <button className ="button"> <span> -  </span> <span> 0  </span> <span>  + </span>
+       </button>
+       </div>
+           </div>
+       /*<Box m={2}>
           <Card variant="outlined">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -176,8 +183,9 @@ function ListaProduto() {
               </Box>
             </CardActions>
           </Card>
-        </Box>
+      </Box>*/
       ))}
+      </div>
     </>
   );
 }

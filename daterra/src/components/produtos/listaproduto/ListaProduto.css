@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 .marcadorLista {
     list-style-type: none;
     text-align: center;
@@ -23,26 +27,64 @@
     margin: 0 10px;
     font-family: 'Barlow', sans-serif !important;
 }
-.container{
-    max-width: 25vw ;
+
+
+
+.container {
+    width:10vw;
     border: 2px solid green;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
+    -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,
+0.88);
+    box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
+ 
+
 }
 
 .imageContainer img {
-width: 93%;
+    width: 10vw;
+    aspect-ratio: 1;
+
+}
+.nomeProduto {
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: bold;
+    text-align: center !important;
+    color: green;
 }
 
-.nomeproduto{
-    font: size 20px;
-    font-weight: bold;
-    text-align:center;
+.valores {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-family: 'Barlow', sans-serif !important;
+
 }
-.valores{
-    display:flex;
-    width:100%;
-    justify-content:space-around
+.Produtoestoquepreco {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button {
+    display: flex;
+    background-color: #C9E265;
+    width: 55px;
+    height: 32px;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: #C9E265;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+    align-items: center;
+
 }
