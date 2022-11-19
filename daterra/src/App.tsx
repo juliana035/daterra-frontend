@@ -18,6 +18,7 @@ import CadastroProduto from "./components/produtos/cadastroProduto/CadastroProdu
 import DeletarCategoria from "./components/categorias/deletarCategoria/DeletarCategoria";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 import UnicoCategoria from "./components/categorias/unicoCategoria/UnicoCategoria";
+import Perfil from "./paginas/perfil/Perfil";
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/deletarCategoria/:id"  element={<DeletarCategoria />}/>
           <Route path="/deletarProduto/:id"  element={<DeletarProduto />}/>
           <Route path="/categoria/:id"  element={<UnicoCategoria />}/>
+          <Route path="/perfil"  element={<Perfil />}/>
           
 
         </Routes>

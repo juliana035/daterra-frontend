@@ -8,7 +8,8 @@ import UserLogin from "../../models/UserLogin";
 import "./Login.css";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { addTipoUser, addToken } from "../../store/tokens/actions";
+import { addId, addTipoUser, addToken } from "../../store/tokens/actions";
+import User from "../../models/User";
 
 
 function Login() {
@@ -24,7 +25,7 @@ function Login() {
     tipoUser: '',
     senha: '',
     token: ''
-  })
+  });
 
   const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
     id: 0,
@@ -34,8 +35,19 @@ function Login() {
     tipoUser: '',
     senha: '',
     token: ''
-  })
+  });
 
+  const [usuario,setUsuario] = useState<User>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    foto: '',
+    tipoUser: '',
+    senha: '',
+    cep:'',
+    cpnj:'',
+    cpf:''
+  });
 
   function updatedModel(event: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
@@ -55,7 +67,8 @@ function Login() {
   useEffect(() => {
     if (respUserLogin.token !== '') {
       dispatch(addToken(respUserLogin.token))
-      dispatch(addTipoUser(respUserLogin.tipoUser.toString()));
+      // dispatch(addTipoUser(respUserLogin.tipoUser.toString()));
+      dispatch(addId(respUserLogin.id.toString()));
       navigate('/home')
       console.log(token)
     }
@@ -86,6 +99,7 @@ function Login() {
         theme: "light",
         progress: undefined,
       });
+      console.log(error)
     }
   }
 

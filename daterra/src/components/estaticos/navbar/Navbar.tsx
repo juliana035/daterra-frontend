@@ -65,7 +65,6 @@ function Navbar() {
                         </Box>
                     </Box>
 
-                    {postagem}
                     <Box className='navbarbox1'>
                         <Link to="/formularioCategoria" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
@@ -104,7 +103,9 @@ function Navbar() {
 
                         <Box mx={1} className='cursor'>
                             <Typography className="corTexto tamTexto">
+                                <Link to='/perfil' className='text-decorator-none'>
                                 Meu Perfil
+                                </Link>
                             </Typography>
                         </Box>
                         <Divider orientation="vertical" flexItem />
