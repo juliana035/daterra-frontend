@@ -185,29 +185,31 @@ function CadastroUsuario() {
                 </Card>
             </Grid>
 
-            <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid item xs={6} className='imagem2'></Grid>
-                <Grid item xs={6} alignItems='center' >
-                    <Box paddingX={10}>
+            <Grid container className='cadastroUsuarioFormContainer'>
+                <Grid item xs={6} className='cadastroUsuarioGrid2'>
+                    <img src="https://i.imgur.com/GEsXPJF.jpg" className='cadastroUsuarioGrid2Imagem'alt="" />
+                </Grid>
+                <Grid item xs={6} className='cadastroUsuarioFormGrid'>
+                    <Box>
                         <form onSubmit={onSubmit}>
-                            <Typography gutterBottom variant='h3' component='h3' className='cadastroUsuariotextos2'>Cadastrar</Typography>
-                            <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
-                            <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="Usuário(e-mail)" variant="outlined" name="usuario" margin="normal" fullWidth />
-                            <TextField value={user.cep} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cep" label="CEP" variant="outlined" name="cep" margin="normal" fullWidth />
+                            <h2>Preencha seus dados para cadastro</h2>
+                            <TextField className='cadastroUsuarioTextfield' value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="nome" label="Nome" variant="outlined" name="nome" size="small" margin="dense"/>
+                            <TextField className='cadastroUsuarioTextfield'value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="Usuário (e-mail)" variant="outlined" name="usuario"  size="small" margin="dense"/>
+                            <TextField className='cadastroUsuarioTextfield' value={user.cep} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cep" label="CEP" variant="outlined" name="cep"  size="small"margin="dense"/>
                             {selectedValue === 'cpf' ? (
-                                <TextField value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpf" label="CPF" variant="outlined" name="cpf" margin="normal" fullWidth />)
-                                : (<TextField value={user.cpnj} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpnj" label="CNPJ" variant="outlined" name="cpnj" margin="normal" fullWidth />)}
-                            {/* <TextField value={user.tipoUser} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="tipoUser" label="Tipo de Usuário" variant="outlined" name="tipoUser" margin="normal" fullWidth /> */}
-                            <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="foto" label="URL da foto" variant="outlined" name="foto" margin="normal" fullWidth />
-                            <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" placeholder='A senha deve conter no mínimo 7 caracteres'fullWidth />
-                            <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id="confirmarSenha" label="Confirmar senha" variant="outlined" name="confirmarSenhaha" margin="normal" type="password" fullWidth />
-                            <Box marginTop={2} textAlign="center">
+                                <TextField className='cadastroUsuarioTextfield' value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpf" label="CPF" variant="outlined" name="cpf"  size="small"margin="dense"/>)
+                                : (<TextField className='cadastroUsuarioTextfield' value={user.cpnj} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpnj" label="CNPJ" variant="outlined" name="cpnj"  size="small"margin="dense"/>)}
+                            {/* <TextField value={user.tipoUser} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="tipoUser" label="Tipo de Usuário" variant="outlined" name="tipoUser" /> */}
+                            <TextField className='cadastroUsuarioTextfield' value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="foto" label="URL da foto" variant="outlined" name="foto"  size="small" margin="dense"/>
+                            <TextField className='cadastroUsuarioTextfield' value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" type="password" placeholder='A senha deve conter no mínimo 7 caracteres' size="small"margin="dense"/>
+                            <TextField className='cadastroUsuarioTextfield' value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id="confirmarSenha" label="Confirmar senha" variant="outlined" name="confirmarSenhaha" type="password"  size="small" margin="dense"/>
+                            <Box>
                                 <Link to="/login" className="text-decorator-none">
-                                    <Button variant="contained" style={{ color: "white", borderColor: "white", backgroundColor: "#FF0000" }} className='btnCancelar'>
+                                    <Button variant="contained"className='btnCancelar'>
                                         Cancelar
                                     </Button>
                                 </Link>
-                                <Button type='submit' variant="contained" style={{ color: "white", borderColor: "white", backgroundColor: "#FF731D" }}>
+                                <Button type='submit' variant="contained" className='CadastroUsuarioBotaoCadastrar'>
                                     Cadastrar
                                 </Button>
 
