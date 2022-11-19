@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Badge, Box, Button, Divider } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import CadastroUsuario from '../../../paginas/cadastroUsuario/CadastroUsuario';
+import User from '../../../models/User';
+import { buscaId } from '../../../service/Service';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -27,7 +30,10 @@ const useStyles = makeStyles((theme: Theme) =>
 function Navbar() {
 
     const classes = useStyles();
-
+    const userId = useSelector<TokenState, TokenState["id"]>((state) => state.id);
+    const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+      (state) => state.tipoUser
+    );
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -35,6 +41,31 @@ function Navbar() {
     let navigate = useNavigate();
 
     const dispatch = useDispatch();
+
+    async function getUserById(id: number) {
+        await buscaId(`usuarios/${id}`, setUsuario, {
+          headers: {
+            Authorization: token,
+          },
+        });
+      }
+    
+    
+      useEffect(() => {
+        getUserById(+userId);
+      });
+
+    const [usuario, setUsuario] = useState<User>({
+        id: +userId,
+        nome: "",
+        usuario: "",
+        tipoUser: tipoUser,
+        cep: "",
+        cpf: "",
+        cpnj: "",
+        foto: "",
+        senha: "",
+      });
 
     function goLogout() {
         dispatch(addToken(""));
@@ -64,19 +95,16 @@ function Navbar() {
                             </Toolbar>
                         </Box>
                     </Box>
-
                     <Box className='navbarbox1'>
-                        <Link to="/formularioCategoria" className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" className="corTexto tamTexto">
-                                    Cadastrar Categoria
-                                </Typography>
-                            </Box>
-                        </Link>
-                        <Divider orientation="vertical" flexItem />
-
-
-                        <Link to="/formularioProduto" className="text-decorator-none">
+                    {usuario.tipoUser ==='produtor'? 
+                    (<><Link to="/formularioCategoria" className="text-decorator-none">
+                                <Box mx={1} className='cursor'>
+                                    <Typography variant="h6" className="corTexto tamTexto">
+                                        Cadastrar Categoria
+                                    </Typography>
+                                </Box>
+                            </Link><Divider orientation="vertical" flexItem />
+                            <Link to="/formularioProduto" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" className="corTexto tamTexto">
                                     Cadastrar Produto
@@ -84,8 +112,11 @@ function Navbar() {
                             </Box>
                         </Link>
                         <Divider orientation="vertical" flexItem />
-
-                        <Box mx={1} className='cursor'>
+                        </>
+                        ):
+                    (<>
+                    </>)}
+                    <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
                                 <Link to='/about' className='text-decorator-none'>
                                     Quem Somos
@@ -94,6 +125,7 @@ function Navbar() {
                         </Box>
 
                         <Divider orientation="vertical" flexItem />
+                                                
 
                         {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
                     <Typography variant="h6" className="corTexto tamTexto">
