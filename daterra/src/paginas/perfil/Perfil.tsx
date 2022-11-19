@@ -37,6 +37,7 @@ function Perfil() {
     });
   }
 
+
   useEffect(() => {
     getUserById(+userId);
   });
@@ -50,6 +51,7 @@ function Perfil() {
       </Grid>
 
       <Grid item xs={6} className="perfilDadosGrid">
+        
         <h1>Meu perfil</h1>
         <div className="perfilDados">
           <TextField
@@ -81,7 +83,7 @@ function Perfil() {
             }}
             variant="filled"
           />
-          {tipoUser === "cpf" ? (
+          {usuario.tipoUser === "cpf" ? (
             <TextField
               id="filled-read-only-input"
               label="CPF"
