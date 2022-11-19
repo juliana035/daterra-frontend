@@ -61,11 +61,11 @@ function Navbar() {
                         <Box display="flex" justifyContent="space-between">
                             <Toolbar>
                                 <Link to='/home' className='texto-decorator-none'><img src="https://i.imgur.com/vUHcakQ.png" alt="Logotipo" height={50} width={100} /></Link>
-
                             </Toolbar>
                         </Box>
-
                     </Box>
+
+                    {postagem}
                     <Box className='navbarbox1'>
                         <Link to="/formularioCategoria" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
@@ -75,6 +75,8 @@ function Navbar() {
                             </Box>
                         </Link>
                         <Divider orientation="vertical" flexItem />
+
+
                         <Link to="/formularioProduto" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" className="corTexto tamTexto">

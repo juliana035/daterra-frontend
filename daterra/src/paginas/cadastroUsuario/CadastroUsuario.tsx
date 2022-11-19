@@ -64,11 +64,11 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        if(selectedValue === 'cpf') {
+        if (selectedValue === 'cpf') {
             setUser({
                 ...user,
                 cpnj: '30645032000105'
-            }) 
+            })
         } else {
             setUser({
                 ...user,
@@ -76,8 +76,8 @@ function CadastroUsuario() {
             })
         }
 
-        if (confirmarSenha === user.senha && user.senha.length>=8) {
-            try{
+        if (confirmarSenha === user.senha && user.senha.length >= 8) {
+            try {
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
                 toast.success("Usuário cadastrado com sucesso!", {
                     position: "top-right",
@@ -88,8 +88,8 @@ function CadastroUsuario() {
                     draggable: false,
                     theme: "light",
                     progress: undefined,
-                  });
-            }catch(error){
+                });
+            } catch (error) {
                 toast.error("Falha interna ao cadastrar", {
                     position: "top-right",
                     autoClose: 2000,
@@ -99,10 +99,10 @@ function CadastroUsuario() {
                     draggable: false,
                     theme: "light",
                     progress: undefined,
-                  });
-                  console.log(error);
+                });
+                console.log(error);
             }
-        }else{
+        } else {
             toast.error("As senhas não conferem. Tente novamente.", {
                 position: "top-right",
                 autoClose: 2000,
@@ -112,9 +112,9 @@ function CadastroUsuario() {
                 draggable: false,
                 theme: "light",
                 progress: undefined,
-              });
-              setUser({ ...user, senha:''});
-              setConfirmarSenha('');
+            });
+            setUser({ ...user, senha: '' });
+            setConfirmarSenha('');
         }
     }
 
@@ -132,56 +132,56 @@ function CadastroUsuario() {
                 </Typography>
 
                 <Card className='cadastroUsuarioTipoUser'>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            src="https://i.imgur.com/zoQy7wV.jpg"
-                            alt="trabalhador rural segurando uma cesta com hortaliças"
-                        />
-                        <CardContent>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        src="https://i.imgur.com/zoQy7wV.jpg"
+                        alt="trabalhador rural segurando uma cesta com hortaliças"
+                    />
+                    <CardContent>
                         <Typography gutterBottom variant="h6" component="div" className='cadastroUsuarioTextoTela1'>
-                                Produtor
-                            </Typography>
-                            <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
-                                Sou um PRODUTOR e quero vender meus produtos nesta plataforma.
-                            </Typography>
-                            <Radio checked={selectedValue === 'produtor'} onChange={handleChange} value='produtor' name='radio-buttons' input-props={{ 'aria-label': 'PRODUTOR' }} />
-                        </CardContent>
+                            Produtor
+                        </Typography>
+                        <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
+                            Sou um PRODUTOR e quero vender meus produtos nesta plataforma.
+                        </Typography>
+                        <Radio checked={selectedValue === 'produtor'} onChange={handleChange} value='produtor' name='radio-buttons' input-props={{ 'aria-label': 'PRODUTOR' }} />
+                    </CardContent>
                 </Card>
 
                 <Card className='cadastroUsuarioTipoUser'>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            src="https://i.imgur.com/pLG26wm.jpg"
-                            alt="refeitório empresarial"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className='cadastroUsuarioTextoTela1'>
-                                Consumidor - Empresa
-                            </Typography>
-                            <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
-                                Sou uma EMPRESA e quero fornecer alimentos orgânicos para meus colaboradores.
-                            </Typography>
-                            <Radio checked={selectedValue === 'cpnj'} onChange={handleChange} value='cpnj' name='radio-buttons' input-props={{ 'aria-label': 'CPNJ' }} />
-                        </CardContent>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        src="https://i.imgur.com/pLG26wm.jpg"
+                        alt="refeitório empresarial"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h6" component="div" className='cadastroUsuarioTextoTela1'>
+                            Consumidor - Empresa
+                        </Typography>
+                        <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
+                            Sou uma EMPRESA e quero fornecer alimentos orgânicos para meus colaboradores.
+                        </Typography>
+                        <Radio checked={selectedValue === 'cpnj'} onChange={handleChange} value='cpnj' name='radio-buttons' input-props={{ 'aria-label': 'CPNJ' }} />
+                    </CardContent>
                 </Card>
                 <Card className='cadastroUsuarioTipoUser'>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            src="https://i.imgur.com/miQ9Ulf.jpg"
-                            alt="família cozinhando"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className='cadastroUsuarioTextoTela1'>
-                                Consumidor - Pessoa Física
-                            </Typography>
-                            <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
-                                Sou uma PESSOA FÍSICA e quero inserir produtos orgânicos na minha alimentação.
-                            </Typography>
-                            <Radio checked={selectedValue === 'cpf'} onChange={handleChange} value='cpf' name='radio-buttons' input-props={{ 'aria-label': 'CPF' }} />
-                        </CardContent>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        src="https://i.imgur.com/miQ9Ulf.jpg"
+                        alt="família cozinhando"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h6" component="div" className='cadastroUsuarioTextoTela1'>
+                            Consumidor - Pessoa Física
+                        </Typography>
+                        <Typography variant="body2" className='cadastroUsuarioTextoTela1'>
+                            Sou uma PESSOA FÍSICA e quero inserir produtos orgânicos na minha alimentação.
+                        </Typography>
+                        <Radio checked={selectedValue === 'cpf'} onChange={handleChange} value='cpf' name='radio-buttons' input-props={{ 'aria-label': 'CPF' }} />
+                    </CardContent>
                 </Card>
             </Grid>
 
@@ -195,8 +195,8 @@ function CadastroUsuario() {
                             <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="Usuário(e-mail)" variant="outlined" name="usuario" margin="normal" fullWidth />
                             <TextField value={user.cep} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cep" label="CEP" variant="outlined" name="cep" margin="normal" fullWidth />
                             {selectedValue === 'cpf' ? (
-                            <TextField value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpf" label="CPF" variant="outlined" name="cpf" margin="normal" fullWidth />) 
-                            : (<TextField value={user.cpnj} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpnj" label="CNPJ" variant="outlined" name="cpnj" margin="normal" fullWidth />) }
+                                <TextField value={user.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpf" label="CPF" variant="outlined" name="cpf" margin="normal" fullWidth />)
+                                : (<TextField value={user.cpnj} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="cpnj" label="CNPJ" variant="outlined" name="cpnj" margin="normal" fullWidth />)}
                             <TextField value={user.tipoUser} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="tipoUser" label="Tipo de Usuário" variant="outlined" name="tipoUser" margin="normal" fullWidth />
                             <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="foto" label="URL da foto" variant="outlined" name="foto" margin="normal" fullWidth />
                             <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
