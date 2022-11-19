@@ -157,7 +157,7 @@ function Navbar() {
 
                         <Link to='/login' className='text-decorator-none'>
                             <Box display="flex" mx={1} className='cursor'>
-                                <Typography className="corTexto tamTexto">
+                                <Typography className="corTexto tamTexto" onClick={goLogout}>
                                     Sair
                                 </Typography>
                             </Box>
