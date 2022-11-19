@@ -32,6 +32,10 @@ function CadastroProduto() {
     (state) => state.tipoUser
   );
 
+  const userId=useSelector<TokenState,TokenState['id']>(
+    (state) => state.id
+  );
+
   useEffect(() => {
     if (token == "") {
       toast.error("Você precisa estar logado", {
@@ -65,7 +69,7 @@ function CadastroProduto() {
   });
 
   const [usuario, setUsuario] = useState<User>({
-    id: 0,
+    id: +userId,
     nome: '',
     usuario: '',
     tipoUser: tipoUser,
