@@ -293,7 +293,7 @@ btn.click(function() {
         </Box>
 
         <Box>
-          <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='comoComprar-img' />
+          <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='homeComoComprar2' />
         </Box>
 
         <Box className='comoDoar-img'>
