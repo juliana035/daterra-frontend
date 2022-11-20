@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {  Card,  CardActions,  CardContent,  Button,  Typography,} from "@material-ui/core";
 import "./ListaProduto.css";
-import { busca } from "../../../service/Service";
+import { busca, buscaId } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -10,6 +10,7 @@ import Produto from "../../../models/Produto";
 import { alpha, Box, InputBase, styled } from "@mui/material";
 import Categoria from "../../../models/Categoria";
 import SearchIcon from '@mui/icons-material/Search';
+import User from "../../../models/User";
 
 function ListaProduto() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -103,7 +104,34 @@ function ListaProduto() {
     },
   }));
 
+  const userId = useSelector<TokenState, TokenState["id"]>((state) => state.id);
+ 
 
+  
+  const [usuario, setUsuario] = useState<User>({
+    id: +userId,
+    nome: "",
+    usuario: "",
+    tipoUser: tipoUser,
+    cep: "",
+    cpf: "",
+    cpnj: "",
+    foto: "",
+    senha: "",
+  });
+
+  async function getUserById(id: number) {
+    await buscaId(`usuarios/${id}`, setUsuario, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
+
+  useEffect(() => {
+    getUserById(+userId);
+  });
   return (
     <>
     <ul className="marcadorLista">
@@ -142,25 +170,8 @@ function ListaProduto() {
        <button className ="button"> <span> -  </span> <span> 0  </span> <span>  + </span>
        </button>
        </div>
-           </div>
-       /*<Box m={2}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Produtos
-              </Typography>
-              <Typography variant="h5" component="h2">
-                {produto.nome}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produto.descricao}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {produto.categoria?.tipo}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
+       {usuario.tipoUser ==='produtor'?(
+       <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
                   <Box mx={1}>
                     <Button
@@ -181,10 +192,9 @@ function ListaProduto() {
                   </Box>
                 </Link>
               </Box>
-            </CardActions>
-          </Card>
-      </Box>*/
-      ))}
+              ):(<></>)}
+          </div>
+        ))}
       </div>
     </>
   );
