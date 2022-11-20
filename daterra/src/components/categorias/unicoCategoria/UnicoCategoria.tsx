@@ -112,12 +112,12 @@ function UnicoCategoria() {
   return (
     <>
       <ul className="marcadorLista">
-        <li className="btMesmaLinha"><button className="btnEstilo">TODOS OS PRODUTOS</button></li>
+        <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
         {categorias.map((categoria) => (
           <li className='btMesmaLinha'> <Link to={`/categoria/${categoria.id}`}><button className='btnEstilo'>{categoria.tipo}</button></Link> </li>
           ))}
 
-        <li className="btMesmaLinha"><button className="btnEstilo">QUERO DOAR</button></li>
+        {/* <li className="btMesmaLinha"><button className="btnEstilo">QUERO DOAR</button></li> */}
         <li className="btMesmaLinha">
           <button className="btnEstilo">
             <Search>
@@ -134,14 +134,14 @@ function UnicoCategoria() {
 
       </ul>
       <p>Home {' > '} {categoria.tipo}</p>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display:"flex" , justifyContent:"center", flexWrap:"wrap"}}>
         {categoria.produtos?.map((produto) => (
           <><div className="container">
             <div className="imageContainer"><img src={produto.foto} alt="" /></div>
             <div className="nomeProduto"> {produto.nome} </div>
             <div className="valores">
               <div className="Produtoestoquepreco">
-                <span>{produto.preco}</span>
+                <span>R$ {produto.preco}</span>
                 <span>{produto.descricao}</span>
               </div>
               <button className="button"> <span> -  </span> <span> 0  </span> <span>  + </span>

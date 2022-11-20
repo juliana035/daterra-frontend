@@ -34,17 +34,14 @@
     width:10vw;
     border: 2px solid green;
     border-radius: 8px;
-    display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 10px;
+    margin: 16px 0px 0px;
     padding: 10px;
     -webkit-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
-    -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,
-0.88);
+    -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,0.88);
     box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
- 
-
+    
 }
 
 .imageContainer img {
