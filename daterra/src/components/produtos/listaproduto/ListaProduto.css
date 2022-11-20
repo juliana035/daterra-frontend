@@ -31,7 +31,7 @@
 
 
 .container {
-    width:10vw;
+    width:15vw;
     border: 2px solid green;
     border-radius: 8px;
     justify-content: center;
@@ -46,7 +46,8 @@
 
 .imageContainer img {
     width: 10vw;
-    aspect-ratio: 1;
+    aspect-ratio:1;
+   
 
 }
 .nomeProduto {
@@ -84,4 +85,11 @@
     font-weight: bold;
     align-items: center;
 
+}
+.botãoAtualiza {
+    background-color: #457D58 !important;
+  
+}
+.botãoDeletar{
+    background-color: #BC4749  !important;
 }
