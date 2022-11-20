@@ -16,7 +16,7 @@ Projeto Da terra Eco-Mercado surgiu como forma de auxiliar na resolução da ODS
 
 <br>
 
-<h3>:hammer: Componentes do prjeto </h3>
+<h3>:hammer: Componentes do projeto </h3>
 
   
 `Home` 
