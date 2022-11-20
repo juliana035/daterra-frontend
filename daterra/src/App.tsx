@@ -39,7 +39,7 @@ function App() {
           <Route path="/formularioProduto/"  element={<CadastroProduto/>}/>
           <Route path="/formularioCategoria/"  element={<CadastroCategoria/>}/>
           <Route path="/formularioProduto/:id"  element={<CadastroProduto/>}/>
-          <Route path="/formularioCategorias/:id"  element={<CadastroCategoria/>}/>
+          <Route path="/formularioCategoria/:id"  element={<CadastroCategoria/>}/>
           <Route path="/deletarCategoria/:id"  element={<DeletarCategoria />}/>
           <Route path="/deletarProduto/:id"  element={<DeletarProduto />}/>
           <Route path="/categoria/:id"  element={<UnicoCategoria />}/>
