@@ -168,5 +168,10 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+    background-color: #457D58;
+    border: none;
+    color: #C9E265;
+    padding: 15px;
+    border-radius: 50%;
   }
 
