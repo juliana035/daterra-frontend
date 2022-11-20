@@ -8,22 +8,23 @@ import { styled } from "@mui/material/styles";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+
+
 function Home() {
 
-/* funcionalidade para o botão de subir para o topo
-var btn = document.querySelector("#back-to-top");
-btn.addEventListener("click", function() {
-    window.scrollTo(0, 0);
-});
-
-ou
-
-var btn = $("#back-to-top");
-btn.click(function() {
-  $('html, body').animate({scrollTop:0}, 'slow');
-});
-*/
-
+  /* funcionalidade para o botão de subir para o topo
+  var btn = document.querySelector("#back-to-top");
+  btn.addEventListener("click", function() {
+      window.scrollTo(0, 0);
+  });
+  
+  ou
+  
+  var btn = $("#back-to-top");
+  btn.click(function() {
+    $('html, body').animate({scrollTop:0}, 'slow');
+  });
+  */
   const banner = [
 
     <img
@@ -146,17 +147,17 @@ btn.click(function() {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 4 },
-};
+  };
 
   const items = [
 
-    
+
     <img
-    src="https://i.imgur.com/MQ90zHw.png"
-    alt="logo Lazyrit"
-    className="carouselImageEmpresas"
-    data-value="1"/>,
-    
+      src="https://i.imgur.com/MQ90zHw.png"
+      alt="logo Lazyrit"
+      className="carouselImageEmpresas"
+      data-value="1" />,
+
     <img
       src="https://i.imgur.com/w4Uogoe.png"
       alt="Logo Beef Steak"
@@ -194,131 +195,21 @@ btn.click(function() {
 
   ];
 
-  return (
-    <>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        className="color"
-      >
-        <Grid alignItems="center" item xs={12}>
-          <Box>
-            <div className="carousel">
-              <AliceCarousel
-                mouseTracking
-                items={banner}
-                infinite
-                autoPlay
-                autoPlayInterval={3000}
-                animationDuration={1000}
-              />
-            </div>
-          </Box>
-        </Grid>
-
-        <Grid item xs={12}>
-          <Box className='homeMotivos'>
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
-                consuma produtos orgânicos
-              </Typography>
-            </Box>
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
-                incentive a agricultura familiar
-              </Typography>
-            </Box>
-
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/2maflsV.png' alt='símbolo de reciclagem' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
-                fortaleça a economia local
-              </Typography>
-            </Box>
-
-            <Box className='homeMotivosBox'>
-              <img src='https://i.imgur.com/PRprlxU.png' alt='saco de papel pardo' className='homeMotivosImagens' />
-              <Typography className='homeMotivosTexto' variant='h5'>
-                doe alimento de qualidade a quem precisa
-              </Typography>
-            </Box>
-          </Box>
-
-
-          <Box className='homeComprePorCategoria'>
-            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola1' />
-            <Typography className='homeComprePorCategoriaTexto' variant='h3'>COMPRE POR CATEGORIA</Typography>
-            <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola2' />
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Box className="backgroundBotoes">
-        <Box className='homeBotoesCategorias'>
-          {imagensProdutos.map((image) => (
-            <Link to={image.link} className='homeBotoesCategoriasLink'>
-              <ImageButton
-                focusRipple
-                key={image.title}
-                style={{
-                  width: image.width
-                }}
-              >
-                <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-                <ImageBackdrop className="MuiImageBackdrop-root" />
-                <Image>
-                  <Typography
-                    component="span"
-                    variant="h4"
-                    color="inherit"
-                    sx={{
-                      position: "relative",
-                      p: 4,
-                      pt: 2,
-                      pb: (theme: { spacing: (arg0: number) => any }) =>
-                        `calc(${theme.spacing(1)} + 6px)`,
-                    }}
-                  >
-                    {image.title}
-                    <ImageMarked className="MuiImageMarked-root" />
-                  </Typography>
-                </Image>
-              </ImageButton>
-            </Link>
-          ))}
-        </Box>
-
-        <Box>
-          <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='comoComprar-img' />
-        </Box>
-
-        <Box className='comoDoar-img'>
-          <img src='https://i.imgur.com/D4tqIzM.png' alt='como doar' />
-        </Box>
-
-        <Box>
-          <img src='https://i.imgur.com/YvdaHOS.png' alt='empresas que consomem produtos Da terra' className='comoComprar-img' />
-        </Box>
-
+    return (
+      <>
         <Grid
           container
           direction="row"
           justifyContent="center"
           alignItems="center"
           className="color"
-          
         >
           <Grid alignItems="center" item xs={12}>
             <Box>
-              <div className="carouselEmpresas">
+              <div className="carousel">
                 <AliceCarousel
                   mouseTracking
-                  items={items}
-                  responsive={responsive}
+                  items={banner}
                   infinite
                   autoPlay
                   autoPlayInterval={3000}
@@ -327,14 +218,124 @@ btn.click(function() {
               </div>
             </Box>
           </Grid>
+
+          <Grid item xs={12}>
+            <Box className='homeMotivos'>
+              <Box className='homeMotivosBox'>
+                <img src='https://i.imgur.com/9wWGF5i.png' alt='ramo com folhas' className='homeMotivosImagens' />
+                <Typography className='homeMotivosTexto' variant='h5'>
+                  consuma produtos orgânicos
+                </Typography>
+              </Box>
+              <Box className='homeMotivosBox'>
+                <img src='https://i.imgur.com/SC8IWob.png' alt='pá de jardinagem' className='homeMotivosImagens' />
+                <Typography className='homeMotivosTexto' variant='h5'>
+                  incentive a agricultura familiar
+                </Typography>
+              </Box>
+
+              <Box className='homeMotivosBox'>
+                <img src='https://i.imgur.com/2maflsV.png' alt='símbolo de reciclagem' className='homeMotivosImagens' />
+                <Typography className='homeMotivosTexto' variant='h5'>
+                  fortaleça a economia local
+                </Typography>
+              </Box>
+
+              <Box className='homeMotivosBox'>
+                <img src='https://i.imgur.com/PRprlxU.png' alt='saco de papel pardo' className='homeMotivosImagens' />
+                <Typography className='homeMotivosTexto' variant='h5'>
+                  doe alimento de qualidade a quem precisa
+                </Typography>
+              </Box>
+            </Box>
+
+
+            <Box className='homeComprePorCategoria'>
+              <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola1' />
+              <Typography className='homeComprePorCategoriaTexto' variant='h3'>COMPRE POR CATEGORIA</Typography>
+              <img src='https://i.imgur.com/HBK3pHv.png' alt='desenho de uma sacola de compras' className='homeSacola2' />
+            </Box>
+          </Grid>
         </Grid>
 
-        <button id="back-to-top">Voltar ao topo</button>
+        <Box className="backgroundBotoes">
+          <Box className='homeBotoesCategorias'>
+            {imagensProdutos.map((image) => (
+              <Link to={image.link} className='homeBotoesCategoriasLink'>
+                <ImageButton
+                  focusRipple
+                  key={image.title}
+                  style={{
+                    width: image.width
+                  }}
+                >
+                  <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+                  <ImageBackdrop className="MuiImageBackdrop-root" />
+                  <Image>
+                    <Typography
+                      component="span"
+                      variant="h4"
+                      color="inherit"
+                      sx={{
+                        position: "relative",
+                        p: 4,
+                        pt: 2,
+                        pb: (theme: { spacing: (arg0: number) => any }) =>
+                          `calc(${theme.spacing(1)} + 6px)`,
+                      }}
+                    >
+                      {image.title}
+                      <ImageMarked className="MuiImageMarked-root" />
+                    </Typography>
+                  </Image>
+                </ImageButton>
+              </Link>
+            ))}
+          </Box>
 
-      </Box>
+          <Box>
+            <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='homeComoComprar2' />
+          </Box>
 
-    </>
-  );
-}
+          <Box className='comoDoar-img'>
+            <img src='https://i.imgur.com/D4tqIzM.png' alt='como doar' />
+          </Box>
 
-export default Home;
+          <Box>
+            <img src='https://i.imgur.com/YvdaHOS.png' alt='empresas que consomem produtos Da terra' className='comoComprar-img' />
+          </Box>
+
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            className="color"
+
+          >
+            <Grid alignItems="center" item xs={12}>
+              <Box>
+                <div className="carouselEmpresas">
+                  <AliceCarousel
+                    mouseTracking
+                    items={items}
+                    responsive={responsive}
+                    infinite
+                    autoPlay
+                    autoPlayInterval={3000}
+                    animationDuration={1000}
+                  />
+                </div>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <button id="back-to-top">Topo</button>
+
+        </Box>
+
+      </>
+    );
+  }
+  
+  export default Home;

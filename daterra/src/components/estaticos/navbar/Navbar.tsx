@@ -125,7 +125,7 @@ function Navbar() {
                     </>)}
                     <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
-                                <Link to='/about' className='text-decorator-none'>
+                                <Link to='/about' className='text-decorator-none corTexto tamTexto'>
                                     Quem Somos
                                 </Link>
                             </Typography>
@@ -134,16 +134,16 @@ function Navbar() {
                         <Divider orientation="vertical" flexItem />
                                               
                         <Box mx={1} className='cursor'>
-                            <Typography className="corTexto tamTexto">
-                                <Link to='/perfil' className='text-decorator-none'>
+                            <Typography>
+                                <Link to='/perfil' className='text-decorator-none corTexto tamTexto'>
                                 Meu Perfil
                                 </Link>
                             </Typography>
                         </Box>
                         <Divider orientation="vertical" flexItem />
                         <Box mx={1} className='cursor'>
-                            <Typography className="corTextoProdutos tamTexto">
-                                <Link to='/produtos' className='text-decorator-none'>
+                            <Typography>
+                                <Link to='/produtos' className='text-decorator-none corTexto tamTexto'>
                                     Todos Produtos
                                 </Link>
                             </Typography>

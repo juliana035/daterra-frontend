@@ -3,7 +3,6 @@
 .cursor{
     cursor: pointer;
     color: white;
- 
 }
 
 .text-decorator-none{
@@ -15,11 +14,7 @@
 }
 
 .corTexto{
-    color: #272727;
-}
-
-.corTextoProdutos{
-    color: #272727;
+    color: #272727 !important;
 }
 
 .NabBarLogoMarca{
@@ -31,10 +26,6 @@
 .tamTexto{
     font-family: 'Barlow', sans-serif !important;
     font-size: large !important;
-}
-
-.text-decorator-none{
-    text-decoration: none;
 }
 
 .navbarbox1{

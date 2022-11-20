@@ -116,6 +116,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 .homeComoComprarTexto{
     display: flex;
@@ -152,9 +153,7 @@
     border-radius: 50%;
     border-width: 5px;
     border-style:outset;
-    border-color: #457D58;
-    
-    
+    border-color: #457D58;    
 }
 
 .carouselEmpresas {
@@ -169,5 +168,10 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+    background-color: #457D58;
+    border: none;
+    color: #C9E265;
+    padding: 15px;
+    border-radius: 50%;
   }
 
