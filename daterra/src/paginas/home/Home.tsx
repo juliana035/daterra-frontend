@@ -292,18 +292,45 @@ function Home() {
               </Link>
             ))}
           </Box>
-
           <Box>
-            <img src='https://i.imgur.com/3SUtzde.png' alt='como comprar' className='homeComoComprar2' />
+          <Box className="homeComoComprar1">
+            Como{" "}
+            <img
+              src="https://i.imgur.com/U7Qe7QW.png"
+              alt="desenho de pegadas de pé" className="homeComoComprarImg"
+            />{" "}
+            comprar:
           </Box>
+          <div className='homeComoComprarStepper'>
+          <img  className='homeComoComprarStepperIMG'src="https://i.imgur.com/uPanCPo.png" alt="1.Você faz seu pedido até quarta-feira, 2.O produtor colhe e prepara tudo fresquinho, 3.Você recebe sua feirinha em casa quinta-feira" />
+          </div>
+          
+          {/* <Box className='homeComoComprar2'>
+            <Box className="homeComoComprarTexto">Você faz seu pedido até quarta-feira</Box>
+            <Box className="homeComoComprarTexto">Os produtores colhem e preparam tudo fresquinho</Box>
+            <Box className="homeComoComprarTexto">Você recebe sua feirinha em casa quinta-feira</Box>
+          </Box> */}
+        </Box>
 
-          <Box className='comoDoar-img'>
+        <Link to='/categoria/7' className='homeLinkDoacao'>
+          <Box className='comoDoar-img'>         
             <img src='https://i.imgur.com/D4tqIzM.png' alt='como doar' />
           </Box>
+          </Link>
 
-          <Box>
-            <img src='https://i.imgur.com/YvdaHOS.png' alt='empresas que consomem produtos Da terra' className='comoComprar-img' />
-          </Box>
+          <Box className="homeEmpresas">
+          <img
+            src="https://i.imgur.com/X0A7QVz.png"
+            className="homePlanetaVerde"
+            alt="Desenho do planeta Terra verde"
+          />
+          <h2>Empresas que consomem produtos Da terra</h2>
+          <img
+            src="https://i.imgur.com/X0A7QVz.png"
+            className="homePlanetaVerde"
+            alt="Desenho do planeta Terra verde"
+          />
+        </Box>
 
           <Grid
             container
