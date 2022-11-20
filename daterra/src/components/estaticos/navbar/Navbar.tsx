@@ -96,7 +96,14 @@ function Navbar() {
                         </Box>
                     </Box>
                     <Box className='navbarbox1'>
-                    {usuario.tipoUser ==='produtor'? 
+                    {usuario.tipoUser === "admin"?
+                   (<><Link to="/categorias" className="text-decorator-none"><Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
+                    <Typography variant="h6" className="corTexto tamTexto">
+                        Todas Categorias 
+                    </Typography>
+                </Box> 
+                 </Link><Divider orientation="vertical" flexItem /></>):(<></>)}
+                    {usuario.tipoUser ==='produtor'|| usuario.tipoUser === "admin"? 
                     (<><Link to="/formularioCategoria" className="text-decorator-none">
                                 <Box mx={1} className='cursor'>
                                     <Typography variant="h6" className="corTexto tamTexto">
@@ -118,32 +125,25 @@ function Navbar() {
                     </>)}
                     <Box mx={1} className='cursor'>
                             <Typography variant="h6" className="corTexto tamTexto">
-                                <Link to='/about' className='text-decorator-none'>
+                                <Link to='/about' className='text-decorator-none corTexto tamTexto'>
                                     Quem Somos
                                 </Link>
                             </Typography>
                         </Box>
 
                         <Divider orientation="vertical" flexItem />
-                                                
-
-                        {/* <Box mx={1} className='cursor' style={{ paddingRight: "1rem" }}>
-                    <Typography variant="h6" className="corTexto tamTexto">
-                        Como Comprar |
-                    </Typography>
-                </Box> */}
-
+                                              
                         <Box mx={1} className='cursor'>
-                            <Typography className="corTexto tamTexto">
-                                <Link to='/perfil' className='text-decorator-none'>
+                            <Typography>
+                                <Link to='/perfil' className='text-decorator-none corTexto tamTexto'>
                                 Meu Perfil
                                 </Link>
                             </Typography>
                         </Box>
                         <Divider orientation="vertical" flexItem />
                         <Box mx={1} className='cursor'>
-                            <Typography className="corTextoProdutos tamTexto">
-                                <Link to='/produtos' className='text-decorator-none'>
+                            <Typography>
+                                <Link to='/produtos' className='text-decorator-none corTexto tamTexto'>
                                     Todos Produtos
                                 </Link>
                             </Typography>
