@@ -9,6 +9,21 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 function Home() {
+
+/* funcionalidade para o botão de subir para o topo
+var btn = document.querySelector("#back-to-top");
+btn.addEventListener("click", function() {
+    window.scrollTo(0, 0);
+});
+
+ou
+
+var btn = $("#back-to-top");
+btn.click(function() {
+  $('html, body').animate({scrollTop:0}, 'slow');
+});
+*/
+
   const banner = [
 
     <img
@@ -313,6 +328,8 @@ function Home() {
             </Box>
           </Grid>
         </Grid>
+
+        <button id="back-to-top">Voltar ao topo</button>
 
       </Box>
 
