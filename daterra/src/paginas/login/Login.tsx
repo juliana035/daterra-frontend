@@ -67,7 +67,6 @@ function Login() {
   useEffect(() => {
     if (respUserLogin.token !== '') {
       dispatch(addToken(respUserLogin.token))
-      // dispatch(addTipoUser(respUserLogin.tipoUser.toString()));
       dispatch(addId(respUserLogin.id.toString()));
       navigate('/home')
       console.log(token)
@@ -133,15 +132,18 @@ function Login() {
               <Button type="submit" variant="outlined" className="loginBotaoEntrar">
                 Entrar
               </Button>
+              
           </Box>
-        </form>
-        <Typography className='loginTexto'>
+          <Typography className='loginTexto'>
           Não tem uma conta? Cadastre-se <Link to='/cadastrousuario' className='loginLinkCadastro'>aqui</Link>!
         </Typography>
+        </form>
+
+        <Box>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen></iframe>
+        </Box>
       </Box>
-      <Box>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen></iframe>
-      </Box>
+
     </Grid>
   );
 
