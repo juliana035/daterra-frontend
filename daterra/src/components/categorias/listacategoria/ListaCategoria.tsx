@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import { Box } from '@mui/material';
 
 function ListaCategoria() {
-  const [categorias, setCategorias] = useState<Categoria[]>([])
+  const [categoria, setCategoria] = useState<Categoria[]>([])
   let navigate = useNavigate();
   const token = useSelector<TokenState,TokenState['tokens']>(
     (state) => state.tokens
@@ -35,7 +35,7 @@ function ListaCategoria() {
 
 
   async function getCategoria(){
-    await busca("/categorias/all", setCategorias, {
+    await busca("/categoria/all", setCategoria, {
       headers: {
         'Authorization': token
       }
@@ -45,12 +45,12 @@ function ListaCategoria() {
 
   useEffect(()=>{
     getCategoria()
-  }, [categorias.length])
+  }, [categoria.length])
 
   return (
     <>
     {
-      categorias.map(categorias =>(
+      categoria.map(categoria =>(
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>
@@ -58,19 +58,19 @@ function ListaCategoria() {
               Categoria
             </Typography>
             <Typography variant="h5" component="h2">
-             {categorias.tipo}
+             {categoria.tipo}
             </Typography>
           </CardContent>
           <CardActions>
             <Box display="flex" justifyContent="center" mb={1.5} >
-              <Link to={`/formularioCategoria/${categorias.id}`} className="text-decorator-none">
+              <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="marginLeft" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/deletarCategoria/${categorias.id}`} className="text-decorator-none">
+              <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" size='small' color="secondary">
                     deletar
