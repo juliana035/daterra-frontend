@@ -173,10 +173,10 @@ function ListaProduto() {
        {usuario.tipoUser ==='produtor'?(
        <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
-                  <Box mx={1}>
+                  <Box mx={1}> 
                     <Button
                       variant="contained"
-                      className="marginLeft"
+                      className="botãoAtualiza"
                       size="small"
                       color="primary"
                     >
@@ -186,7 +186,7 @@ function ListaProduto() {
                 </Link>
                 <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
                   <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
+                    <Button variant="contained" size="small" color="secondary" className="botãoDeletar">
                       deletar
                     </Button>
                   </Box>
