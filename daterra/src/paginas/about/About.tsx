@@ -65,13 +65,11 @@ function About(){
        </Box>
        <br/>
        <br/>
-       <Box display="center" justifyContent="center" className="textoAbout">
-        <Typography className="textAbout">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum repellat placeat hic ipsa laborum eos dignissimos deserunt tempore? Consequatur modi a consequuntur tenetur sit rem libero debitis vero perspiciatis blanditiis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime! Ipsam quidem est eveniet doloremque modi nemo maiores excepturi deleniti odio, quos neque eaque laudantium aspernatur molestias odit atque ex?
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, qui eos? Veritatis quos alias pariatur officia natus recusandae corporis eveniet velit sed repellendus iure, illum reiciendis vel harum expedita fuga?
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi adipisci tempore in asperiores temporibus magni, quasi blanditiis, a delectus officiis amet incidunt vero ad repellendus, dignissimos animi similique officia ex.
-        </Typography>
+       <Box display="center" justifyContent="center" className="textoAboutBox">
+        
+            <Typography className="textAbout">O projeto Da terra surgiu para unir pequenos produtores com grandes empresas e para mostrar que todos têm espaço na sociedade! Esse projeto despertou no coração de 8 desevolvedoras na qual enxergaram a necessidade de incentivar pequenos produtores ganhar espaço no mercado no  mundo do e-commerce.            </Typography> 
+            <Typography className="textAbout">Da terra surgiu como forma de auxiliar na resolução da ODS 2 (Fome Zero e Agricultura Sustentável) da ONU. Pensando nisso, desenvolvemos um e-commerce que visa gerar renda para pequenos produtores de agricultura familiar sustentável através da conexão com grandes empresas e a população em geral, proporcionando assim, visibilidade e incentivo à esse meio de cultivo, além de facilitar o acesso à alimentos de alta qualidade nutricional. Como medida social, disponibilizamos na nossa aplicação, vouchers para doações como ações contra a fome.</Typography> 
+        
        </Box>
         </Grid>
     )
