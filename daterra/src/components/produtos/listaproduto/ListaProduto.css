@@ -38,7 +38,8 @@
 
 
 .container {
-    width:15vw;
+    width: 15vw;
+    max-height: 50vh;
     border: 2px solid green;
     border-radius: 8px;
     justify-content: center;
@@ -98,6 +99,7 @@
 .botãoAtualiza {
     background-color: #457D58 !important;
     font-family: 'Barlow', sans-serif !important;
+    
   
 }
 .botãoDeletar{
