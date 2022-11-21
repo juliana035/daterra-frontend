@@ -40,7 +40,7 @@ useEffect(()=>{
   },[id])
 
   async function findById(id:string) {
-    buscaId(`/categorias/${id}`,setCategoria,{
+    buscaId(`/categoria/${id}`,setCategoria,{
       headers:{
         'Authorization': token
       }
@@ -49,7 +49,7 @@ useEffect(()=>{
 
     function sim(){
       navigate('/categorias')
-        deleteId(`/categorias/${id}`,{
+        deleteId(`/categoria/${id}`,{
           headers:{
             'Authorization': token
           }
