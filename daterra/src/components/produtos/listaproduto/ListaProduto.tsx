@@ -137,7 +137,7 @@ function ListaProduto() {
   });
 
   return (
-    <Grid className="listaprodutosFundo">
+    <Grid container className="listaprodutosFundo">
       
       <ul className="marcadorLista">
         <li className="btMesmaLinha">
