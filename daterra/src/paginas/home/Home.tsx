@@ -13,42 +13,28 @@ import { red } from "@mui/material/colors";
 
 function Home() {
 
-  /* funcionalidade para o botão de subir para o topo
-  var btn = document.querySelector("#back-to-top");
-  btn.addEventListener("click", function() {
-      window.scrollTo(0, 0);
-  });
-  
-  ou
-  
-  var btn = $("#back-to-top");
-  btn.click(function() {
-    $('html, body').animate({scrollTop:0}, 'slow');
-  });
-  */
   const banner = [
 
-    
-      <Link to="/produtos">
-    <img
-      src="https://i.imgur.com/zfvhpM5.png"
-      alt="fortaleça o movimento de agricultura familiar sustentável"
-      className="carouselImage homeCursor"
-    /></Link>,
+    <Link to="/produtos">
+      <img
+        src="https://i.imgur.com/zfvhpM5.png"
+        alt="fortaleça o movimento de agricultura familiar sustentável"
+        className="carouselImage homeCursor"
+      /></Link>,
 
     <Link to="/categoria/7">
-    <img
-      src="https://i.imgur.com/3u2DLWU.png"
-      alt="Da terra direto pra mesa de quem precisa"
-      className="carouselImage homeCursor"
-    /></Link>,
+      <img
+        src="https://i.imgur.com/3u2DLWU.png"
+        alt="Da terra direto pra mesa de quem precisa"
+        className="carouselImage homeCursor"
+      /></Link>,
 
     <Link to="/about">
-    <img
-      src="https://i.imgur.com/A6Lzsow.png"
-      alt="quem somos nós"
-      className="carouselImage"
-    /></Link>,
+      <img
+        src="https://i.imgur.com/A6Lzsow.png"
+        alt="quem somos nós"
+        className="carouselImage"
+      /></Link>,
 
     <img
       src="https://i.imgur.com/rmZ5cVY.png"
@@ -200,6 +186,10 @@ function Home() {
 
   ];
 
+  function irParaoTopo() {
+    window.scroll(0, 0)
+  };
+
   return (
     <>
       <Grid
@@ -329,7 +319,7 @@ function Home() {
             className="homePlanetaVerde"
             alt="Desenho do planeta Terra verde"
           />
-          
+
           <Typography className='homeComprePorCategoriaTexto' variant='h3'>Empresas que consomem produtos Da terra</Typography>
           <img
             src="https://i.imgur.com/X0A7QVz.png"
@@ -363,7 +353,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <button id="back-to-top">Topo</button>
+        <button id="back-to-top" onClick={irParaoTopo}>Topo</button>
 
       </Box>
 
