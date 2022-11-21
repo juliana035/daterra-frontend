@@ -139,8 +139,8 @@ function Login() {
         </Typography>
         </form>
 
-        <Box>
-        <iframe width="504" height="283,5" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen className='videoLogin'></iframe>
+        <Box className='semOpacidade'>
+        <iframe width="504" height="284" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen className='videoLogin'></iframe>
         </Box>
       </Box>
 
