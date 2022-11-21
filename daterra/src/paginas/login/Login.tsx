@@ -140,7 +140,7 @@ function Login() {
         </form>
 
         <Box>
-        <iframe width="400" height="225" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen></iframe>
+        <iframe width="504" height="283,5" src="https://www.youtube.com/embed/gfz8uq0oBxc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-fullscreen className='videoLogin'></iframe>
         </Box>
       </Box>
 
