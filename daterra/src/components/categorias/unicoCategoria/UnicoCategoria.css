@@ -9,11 +9,11 @@
     border: 2px solid green;
     border-radius: 8px;
     display: center;
+    margin: 10px;
     justify-content: center;
     flex-wrap: wrap !important;
     flex-direction: column;
-    margin: 10px;
-    padding: 10px;
+    padding: 20px;
     -webkit-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
     -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,0.88);
     box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
@@ -65,14 +65,31 @@
 }
 
 .unicoCategoriaFundo{
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
     width: 100vw;
     min-height: 100vh;
-    justify-content: center;
     background-color: #F6F6E9;
 }
 
-/* .unicoCategoriaBreadcrumb{
+.unicoCategoriaBreadcrumb{
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10rem;
-} */
+    padding-bottom: 20px;
+
+}
+
+.btnEstilo{
+    color: #272727;
+    background-color: #C9E265;
+    border: none;
+    height: 40px;
+    line-height: 20px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-family: 'Barlow', sans-serif !important;
+}
