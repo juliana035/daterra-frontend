@@ -19,6 +19,7 @@ import Categoria from "../../../models/Categoria";
 import Produto from "../../../models/Produto";
 import { busca, buscaId, post, put } from "../../../service/Service";
 import User from "../../../models/User";
+import './CadastroProduto.css'
 
 function CadastroProduto() {
   let navigate = useNavigate();
@@ -164,7 +165,7 @@ function CadastroProduto() {
 
   return (
     <Container maxWidth="sm" className="topo">
-      <form onSubmit={cadastrarProduto}>
+      <form onSubmit={cadastrarProduto} className='form'>
         <Typography
           variant="h3"
           color="textSecondary"
@@ -244,6 +245,7 @@ function CadastroProduto() {
           <Select
             labelId="categoriaSelect"
             id="categoria"
+            variant="outlined"
             onChange={(event) =>
               buscaId(`/categoria/${event.target.value}`, setCategoria, {
                 headers: {
@@ -256,8 +258,9 @@ function CadastroProduto() {
               <MenuItem value={categorias.id}>{categorias.tipo}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-          <Button type="submit" variant="contained" color="primary" disabled={categoria.id===0}>
+          <FormHelperText className='textHelper'>Escolha uma categoria para o produto</FormHelperText>
+          
+          <Button type="submit" variant="contained" color="primary" disabled={categoria.id===0} className='btnFinalizar'>
             Finalizar
           </Button>
         </FormControl>

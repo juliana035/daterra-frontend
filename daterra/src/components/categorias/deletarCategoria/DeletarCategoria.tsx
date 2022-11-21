@@ -7,6 +7,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { Box } from '@mui/material';
+import './DeletarCategoria.css';
 
 
 function DeletarCategoria() {
@@ -87,12 +88,12 @@ useEffect(()=>{
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button onClick={sim}variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim}variant="contained" className="btnSim" size='large'  >
                   Sim
                 </Button>
               </Box>
               <Box mx={2}>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                <Button onClick={nao} variant="contained" size='large'  className='btnNao'>
                   Não
                 </Button>
               </Box>

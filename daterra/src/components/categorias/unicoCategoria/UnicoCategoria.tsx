@@ -140,6 +140,14 @@ function UnicoCategoria() {
       
       <ul className="marcadorLista" >
         <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
+
+        {produtos.length === 0 && (
+        <div className='containerLista'>
+
+<span className="loader"></span>
+      </div>
+      )}
+      
         {categorias.map((categoria) => (
           <li className='btMesmaLinha'> <Link to={`/categoria/${categoria.id}`}><button className='btnEstilo'>{categoria.tipo}</button></Link> </li>
           ))}

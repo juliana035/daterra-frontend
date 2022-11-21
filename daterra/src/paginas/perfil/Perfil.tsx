@@ -112,6 +112,7 @@ function Perfil() {
             variant="contained"
             size="small"
             color="primary"
+            disabled={usuario.id===0}
           >
             atualizar
           </Button>

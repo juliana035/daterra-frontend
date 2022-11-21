@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
+import './CadastroCategoria.css';
 
 
 function CadastroCategoria() {
@@ -105,7 +106,7 @@ function CadastroCategoria() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de categoria</Typography>
                 <TextField value={categoria.tipo} onChange={(event: ChangeEvent<HTMLInputElement>) => updateCategoria(event)} id="tipo" label="Tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary" disabled={categoria.tipo===''} className='btnFinalizar'>
                     Finalizar
                 </Button>
             </form>

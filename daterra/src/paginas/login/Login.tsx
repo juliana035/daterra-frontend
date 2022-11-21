@@ -14,6 +14,8 @@ import User from "../../models/User";
 
 function Login() {
 
+  const [form, setForm] = useState(false)
+
   let navigate = useNavigate();
   const dispatch = useDispatch();
   const [token, setToken] = useState('');
@@ -129,8 +131,8 @@ function Login() {
           type="password" />
 
           <Box >  
-              <Button type="submit" variant="outlined" className="loginBotaoEntrar">
-                Entrar
+            <Button type="submit" variant="outlined" className="loginBotaoEntrar">
+            Entrar 
               </Button>
               
           </Box>
