@@ -1,3 +1,8 @@
+.homeCursor{
+    cursor: pointer;
+    color: white;
+}
+
 .carousel {
     width: 75vw;
     display: block;
