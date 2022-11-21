@@ -6,17 +6,18 @@
     font-size: 30px !important;
 }
 
-
-
-.textoAbout {
+.textoAboutBox {
     width: 70vw;
     display: block;
-    margin: 0 auto;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .textAbout{
     font-family: 'Barlow', sans-serif !important;
     font-size: 20px !important;
+    text-align: justify;
+    padding: 0.5rem;
 }
 
 .cursorAbout{
