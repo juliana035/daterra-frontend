@@ -7,6 +7,7 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { red } from "@mui/material/colors";
 
 
 
@@ -133,7 +134,7 @@ function Home() {
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
+    opacity: 0.1,
     transition: theme.transitions.create("opacity"),
   }));
 
@@ -262,10 +263,10 @@ function Home() {
         </Grid>
       </Grid>
 
-      <Box className="backgroundBotoes">
-        <Box className='homeBotoesCategorias'>
+      <Box className="backgroundBotoes ">
+        <Box className='homeBotoesCategorias '>
           {imagensProdutos.map((image) => (
-            <Link to={image.link} className='homeBotoesCategoriasLink'>
+            <Link to={image.link} className='homeBotoesCategoriasLink homeBordaCategoria'>
               <ImageButton
                 focusRipple
                 key={image.title}
@@ -298,12 +299,12 @@ function Home() {
         </Box>
         <Box>
           <Box className="homeComoComprar1">
-            Como{" "}
+            COMO{" "}
             <img
               src="https://i.imgur.com/U7Qe7QW.png"
               alt="desenho de pegadas de pé" className="homeComoComprarImg"
             />{" "}
-            comprar:
+            COMPRAR:
           </Box>
           <div className='homeComoComprarStepper'>
             <img className='homeComoComprarStepperIMG' src="https://i.imgur.com/uPanCPo.png" alt="1.Você faz seu pedido até quarta-feira, 2.O produtor colhe e prepara tudo fresquinho, 3.Você recebe sua feirinha em casa quinta-feira" />
@@ -328,7 +329,8 @@ function Home() {
             className="homePlanetaVerde"
             alt="Desenho do planeta Terra verde"
           />
-          <h2>Empresas que consomem produtos Da terra</h2>
+          
+          <Typography className='homeComprePorCategoriaTexto' variant='h3'>Empresas que consomem produtos Da terra</Typography>
           <img
             src="https://i.imgur.com/X0A7QVz.png"
             className="homePlanetaVerde"

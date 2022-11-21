@@ -93,7 +93,7 @@
 
 .homeComoComprar1{
     display: flex;
-    margin:1rem;
+    margin:2rem;
     align-items: center;
     justify-content: center;
     font-family: 'Barlow', sans-serif !important;
@@ -147,6 +147,7 @@
 .homeEmpresas{
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: 'Barlow', sans-serif !important;
     color: #272727;
     font-size: 1.5rem;
@@ -184,3 +185,8 @@
     border-radius: 50%;
   }
 
+.homeBordaCategoria{
+    border-width: 5px;
+    border-style:solid;
+    border-color:#C9E265;   
+}
