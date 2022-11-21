@@ -145,6 +145,15 @@ function ListaProduto() {
             <button className="btnEstilo">TODOS OS PRODUTOS</button>
           </Link>
         </li>
+
+     {produtos.length === 0 && (
+        <div className='containerLista'>
+
+<span className="loader"></span>
+      </div>
+      )} 
+      
+
         {categorias.map((categoria) => (
           <li className="btMesmaLinha">
             {" "}
@@ -169,7 +178,6 @@ function ListaProduto() {
           </button>
         </li>
       </ul>
-      {produtos.length === 0 && <span className="loader"></span>}
       <div
         style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
       >

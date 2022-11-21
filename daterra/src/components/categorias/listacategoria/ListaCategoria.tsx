@@ -65,7 +65,7 @@ function ListaCategoria() {
             <Box display="flex" justifyContent="center" mb={1.5}>
               <Link to={`/formularioCategoria/${categoria.id }`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="botãoAtualizar" size='small' color="primary" >
+                  <Button variant="contained" className="botãoAtualizar" size='small' color="primary"  >
                     atualizar
                   </Button>
                 </Box>

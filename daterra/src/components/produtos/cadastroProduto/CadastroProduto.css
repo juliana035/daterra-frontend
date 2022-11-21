@@ -1,3 +1,23 @@
-.topo{
-    margin-top: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+.form{
+    padding: 25px;
 }
+
+.btnFinalizar{
+    padding: 10px;
+    background-color: #457d58 !important;
+    font-family: 'Barlow', sans-serif !important;
+}
+
+.btnFinalizar:disabled {
+    color:rgb(148, 148, 148) !important;
+    border-color:white !important;
+    background-color:rgb(202, 197, 197) !important;
+  }
+
+.textHelper{
+    padding-bottom: 10px;
+}
+

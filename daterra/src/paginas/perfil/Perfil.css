@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 .perfilFundo{
     background-color: #F6F6E9;
     min-height: 100vh;
@@ -33,4 +36,11 @@
 .perfilBotaoEntrar{
     font-family: 'Barlow', sans-serif !important;
     background-color: #457D58!important;
+
 }
+
+.perfilBotaoEntrar:disabled {
+    color:rgb(148, 148, 148) !important;
+    border-color:white !important;
+    background-color:rgb(202, 197, 197) !important;
+  }
