@@ -137,6 +137,7 @@ function UnicoCategoria() {
 
   return (
     <Grid container className="unicoCategoriaFundo">
+      
       <ul className="marcadorLista" >
         <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
         {categorias.map((categoria) => (
@@ -158,8 +159,9 @@ function UnicoCategoria() {
           </button>
         </li>
       </ul>
+      
+      {/* <Box className='unicoCategoriaBreadcrumb'>Home {' > '} {categoria.tipo}      </Box> */}
 
-      <p>Home {' > '} {categoria.tipo}</p>
       <div style={{ display:"flex" , justifyContent:"center", flexWrap:"wrap"}}>
         {categoria.produtos?.map((produto) => (
           <><div className="container">
@@ -213,6 +215,7 @@ function UnicoCategoria() {
           </>
         ))}
       </div>
+
     </Grid>
   );
 }

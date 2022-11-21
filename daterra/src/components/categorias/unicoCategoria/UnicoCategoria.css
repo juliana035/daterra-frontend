@@ -5,6 +5,7 @@
 
 .container {
     max-width: 35vw;
+    max-height: 50vh;
     border: 2px solid green;
     border-radius: 8px;
     display: center;
@@ -69,3 +70,9 @@
     justify-content: center;
     background-color: #F6F6E9;
 }
+
+/* .unicoCategoriaBreadcrumb{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+} */
