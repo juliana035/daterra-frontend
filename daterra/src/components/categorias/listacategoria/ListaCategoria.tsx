@@ -51,8 +51,8 @@ function ListaCategoria() {
     <>
     {
       categoria.map(categoria =>(
-      <Box m={2} >
-        <Card variant="outlined">
+      <Box m={2} className = "todasCategoria" >
+        <Card variant="outlined" >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Categoria
@@ -60,19 +60,19 @@ function ListaCategoria() {
             <Typography variant="h5" component="h2">
              {categoria.tipo}
             </Typography>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5} >
-              <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
+          </CardContent >
+          <CardActions >
+            <Box display="flex" justifyContent="center" mb={1.5}>
+              <Link to={`/formularioCategoria/${categoria.id }`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                  <Button variant="contained" className="botãoAtualizar" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
+                  <Button variant="contained" size='small' color="secondary" className="botãoDeletar">
                     deletar
                   </Button>
                 </Box>

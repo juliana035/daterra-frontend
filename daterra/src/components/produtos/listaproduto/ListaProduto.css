@@ -44,11 +44,11 @@
     
 }
 
-.imageContainer img {
-    width: 10vw;
+.imageContainer1 img {
+    width: 14vw;
     aspect-ratio:1;
    
-
+     
 }
 .nomeProduto {
     font-family: 'Barlow', sans-serif !important;
