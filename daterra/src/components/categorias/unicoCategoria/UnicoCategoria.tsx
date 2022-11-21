@@ -107,7 +107,7 @@ function UnicoCategoria() {
     },
   }));
 
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
+  const SearchIconWrapper:any = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -160,7 +160,7 @@ function UnicoCategoria() {
         </li>
       </ul>
       
-      {/* <Box className='unicoCategoriaBreadcrumb'>Home {' > '} {categoria.tipo}      </Box> */}
+      { <Box className='unicoCategoriaBreadcrumb'>Home {' > '} {categoria.tipo}      </Box> }
 
       <div style={{ display:"flex" , justifyContent:"center", flexWrap:"wrap"}}>
         {categoria.produtos?.map((produto) => (
