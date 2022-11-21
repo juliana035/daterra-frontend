@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
+.listaprodutosFundo{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #F6F6E9;
+}
+
 .marcadorLista {
     list-style-type: none;
     text-align: center;
     margin-top: 2em;
     margin-bottom: 3em;
+    
 }
 
 .btMesmaLinha{
@@ -31,23 +38,25 @@
 
 
 .container {
-    width:10vw;
+    width:15vw;
     border: 2px solid green;
     border-radius: 8px;
     justify-content: center;
     flex-direction: column;
-    margin: 16px 0px 0px;
+    /* margin: 16px 0px 0px; */
     padding: 10px;
     -webkit-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
     -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,0.88);
     box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
+    background-color: white;
     
 }
 
-.imageContainer img {
-    width: 10vw;
-    aspect-ratio: 1;
-
+.imageContainer1 img {
+    width: 14vw;
+    aspect-ratio:1;
+   
+     
 }
 .nomeProduto {
     font-family: 'Barlow', sans-serif !important;
@@ -83,5 +92,15 @@
     margin-top: 10px;
     font-weight: bold;
     align-items: center;
+    font-family: 'Barlow', sans-serif !important;
 
+}
+.botãoAtualiza {
+    background-color: #457D58 !important;
+    font-family: 'Barlow', sans-serif !important;
+  
+}
+.botãoDeletar{
+    background-color: #BC4749  !important;
+    font-family: 'Barlow', sans-serif !important;
 }

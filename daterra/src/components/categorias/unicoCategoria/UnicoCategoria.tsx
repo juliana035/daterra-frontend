@@ -1,4 +1,4 @@
-import { alpha, Box, Button, Card, CardActions, CardContent, InputBase, styled, Typography } from '@mui/material';
+import { alpha, Box, Button, Card, CardActions, CardContent, Grid, InputBase, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import './UnicoCategoria.css'
 import SearchIcon from '@mui/icons-material/Search';
 import Produto from '../../../models/Produto';
+import User from '../../../models/User';
 
 
 function UnicoCategoria() {
@@ -19,6 +20,26 @@ function UnicoCategoria() {
     tipo: '',
     produtos: null
   })
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  const tipoUser = useSelector<TokenState, TokenState["tipoUser"]>(
+    (state) => state.id
+  );
+  const userId = useSelector<TokenState, TokenState["id"]>((state) => state.id);
+
+  const [usuario, setUsuario] = useState<User>({
+    id: +userId,
+    nome: "",
+    usuario: "",
+    tipoUser: tipoUser,
+    cep: "",
+    cpf: "",
+    cpnj: "",
+    foto: "",
+    senha: "",
+  });
 
   async function getProduto() {
     await busca("/produtos/all", setProdutos, {
@@ -37,20 +58,25 @@ function UnicoCategoria() {
 
   }
 
+  async function getUserById(id: number) {
+    await buscaId(`usuarios/${id}`, setUsuario, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
   useEffect(() => {
     getProduto();
     getCategorias()
   }, [produtos.length]);
 
   
-
+  useEffect(() => {
+    getUserById(+userId);
+  });
 
   const { id } = useParams<{ id: string }>();
-  // const [categorias, setCategorias] = useState<Categoria[]>([]);
-
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
-    );
 
   async function findById(id: string) {
     await buscaId(`/categoria/${id}`, setCategoria, {
@@ -110,8 +136,8 @@ function UnicoCategoria() {
 
 
   return (
-    <>
-      <ul className="marcadorLista">
+    <Grid container className="unicoCategoriaFundo">
+      <ul className="marcadorLista" >
         <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
         {categorias.map((categoria) => (
           <li className='btMesmaLinha'> <Link to={`/categoria/${categoria.id}`}><button className='btnEstilo'>{categoria.tipo}</button></Link> </li>
@@ -131,8 +157,8 @@ function UnicoCategoria() {
             </Search>
           </button>
         </li>
-
       </ul>
+
       <p>Home {' > '} {categoria.tipo}</p>
       <div style={{ display:"flex" , justifyContent:"center", flexWrap:"wrap"}}>
         {categoria.produtos?.map((produto) => (
@@ -147,53 +173,48 @@ function UnicoCategoria() {
               <button className="button"> <span> -  </span> <span> 0  </span> <span>  + </span>
               </button>
             </div>
-          </div>
-            {/* <Box m={2}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Typography color="textSecondary" gutterBottom>
-                    Produtos
-                  </Typography>
-                  <Typography variant="h5" component="h2">
-                    {produto.nome}
-                  </Typography>
-                  <Typography variant="body2" component="p">
-                    {produto.descricao}
-                  </Typography>
-                  <Typography variant="body2" component="p">
-                    {produto.categoria?.tipo}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Box display="flex" justifyContent="center" mb={1.5}>
-                    <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
-                      <Box mx={1}>
-                        <Button
-                          variant="contained"
-                          className="marginLeft"
-                          size="small"
-                          color="primary"
-                        >
-                          atualizar
-                        </Button>
-                      </Box>
-                    </Link>
-                    <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                      <Box mx={1}>
-                        <Button variant="contained" size="small" color="secondary">
-                          deletar
-                        </Button>
-                      </Box>
-                    </Link>
+            {usuario.tipoUser === "produtor" || usuario.tipoUser === "admin" ? (
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                <Link
+                  to={`/formularioProduto/${produto.id}`}
+                  className="text-decorator-none"
+                >
+                  <Box mx={1}>
+                    <Button
+                      variant="contained"
+                      className="botãoAtualiza"
+                      size="small"
+                      color="primary"
+                    >
+                      atualizar
+                    </Button>
                   </Box>
-                </CardActions>
-              </Card>
-            </Box> */}
+                </Link>
+                <Link
+                  to={`/deletarProduto/${produto.id}`}
+                  className="text-decorator-none"
+                >
+                  <Box mx={1}>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      color="secondary"
+                      className="botãoDeletar"
+                    >
+                      deletar
+                    </Button>
+                  </Box>
+                </Link>
+              </Box>
+            ) : (
+              <></>
+            )}
+          </div>
           </>
         ))}
       </div>
-    </>
-  )
+    </Grid>
+  );
 }
 
 export default UnicoCategoria;
