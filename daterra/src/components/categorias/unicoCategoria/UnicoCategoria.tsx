@@ -1,4 +1,4 @@
-import { alpha, Box, Button, Card, CardActions, CardContent, InputBase, styled, Typography } from '@mui/material';
+import { alpha, Box, Button, Card, CardActions, CardContent, Grid, InputBase, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -136,8 +136,8 @@ function UnicoCategoria() {
 
 
   return (
-    <>
-      <ul className="marcadorLista">
+    <Grid container className="unicoCategoriaFundo">
+      <ul className="marcadorLista" >
         <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
         {categorias.map((categoria) => (
           <li className='btMesmaLinha'> <Link to={`/categoria/${categoria.id}`}><button className='btnEstilo'>{categoria.tipo}</button></Link> </li>
@@ -213,8 +213,8 @@ function UnicoCategoria() {
           </>
         ))}
       </div>
-    </>
-  )
+    </Grid>
+  );
 }
 
 export default UnicoCategoria;

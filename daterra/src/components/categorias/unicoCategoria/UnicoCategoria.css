@@ -21,8 +21,8 @@
 }
 
 .imageContainer img {
-    width: 10vw;
-    aspect-ratio: 4/4;
+    width: 15vw;
+    aspect-ratio: 1;
 
 }
 .nomeProduto {
@@ -30,6 +30,7 @@
     font-weight: bold;
     text-align: center !important;
     color: green;
+    text-transform: uppercase;
 }
 
 .valores {
@@ -60,4 +61,11 @@
     font-weight: bold;
     align-items: center;
 
+}
+
+.unicoCategoriaFundo{
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #F6F6E9;
 }
