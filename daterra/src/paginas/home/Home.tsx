@@ -134,7 +134,7 @@ function Home() {
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
-    opacity: 0.1,
+    opacity: 0.3,
     transition: theme.transitions.create("opacity"),
   }));
 
