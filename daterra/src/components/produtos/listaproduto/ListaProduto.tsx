@@ -157,10 +157,10 @@ function ListaProduto() {
       
     </ul>
      {produtos.length===0 &&<span className="loader"></span>}
-     <div style= {{display:"flex" , justifyContent:"center", flexWrap:"wrap"}}>
+     <div style= {{display:"flex", justifyContent:"center", flexWrap:"wrap"}}>
      {produtos.map((produto) => (
        <div className="container">
-       <div className="imageContainer"><img src={produto.foto} alt="" /></div>
+       <div className="imageContainer1"><img src={produto.foto} alt=""/></div>
        <div className="nomeProduto"> {produto.nome} </div>
        <div className="valores"> 
        <div className="Produtoestoquepreco"> 
