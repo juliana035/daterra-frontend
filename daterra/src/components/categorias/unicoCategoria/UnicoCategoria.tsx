@@ -137,6 +137,7 @@ function UnicoCategoria() {
 
   return (
     <Grid container className="unicoCategoriaFundo">
+
       
       <ul className="marcadorLista" >
         <li className="btMesmaLinha"><Link to="/produtos"><button className="btnEstilo">TODOS OS PRODUTOS</button></Link></li>
@@ -144,7 +145,7 @@ function UnicoCategoria() {
         {produtos.length === 0 && (
         <div className='containerLista'>
 
-<span className="loader"></span>
+      <span className="loader"></span>
       </div>
       )}
       
@@ -152,7 +153,6 @@ function UnicoCategoria() {
           <li className='btMesmaLinha'> <Link to={`/categoria/${categoria.id}`}><button className='btnEstilo'>{categoria.tipo}</button></Link> </li>
           ))}
 
-        {/* <li className="btMesmaLinha"><button className="btnEstilo">QUERO DOAR</button></li> */}
         <li className="btMesmaLinha">
           <button className="btnEstilo">
             <Search>
@@ -167,6 +167,7 @@ function UnicoCategoria() {
           </button>
         </li>
       </ul>
+
       
       { <Box className='unicoCategoriaBreadcrumb'>Home {' > '} {categoria.tipo}      </Box> }
 

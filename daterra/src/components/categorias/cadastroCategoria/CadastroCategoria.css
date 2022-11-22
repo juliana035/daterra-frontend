@@ -3,8 +3,9 @@
 
 .topo{
     margin-top: 20px;
-}
 
+}
+    
 .btnFinalizar{
     padding: 10px;
     background-color: #457d58 !important;
@@ -16,3 +17,14 @@
     border-color:white !important;
     background-color:rgb(202, 197, 197) !important;
   }
+  
+  .fundoCadCat{
+    background-color: #F6F6E9;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+  

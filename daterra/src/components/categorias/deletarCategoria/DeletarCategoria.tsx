@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
+import {Card, CardActions, CardContent, Button, Typography, Grid} from '@material-ui/core';
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../service/Service';
 import { useSelector } from 'react-redux';
@@ -72,8 +72,8 @@ useEffect(()=>{
     }
 
   return (
-    <>
-      <Box m={2}>
+    <Grid className="fundoDeletCat">
+      <Box m={2} className='deletCardCat'>
         <Card variant="outlined">
           <CardContent>
             <Box justifyContent="center">
@@ -101,7 +101,7 @@ useEffect(()=>{
           </CardActions>
         </Card>
       </Box>
-    </>
+    </Grid>
   );
 }
 export default DeletarCategoria;

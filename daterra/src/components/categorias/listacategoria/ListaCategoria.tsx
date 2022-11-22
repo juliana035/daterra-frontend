@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
 import './ListaCategoria.css';
 import {useNavigate} from 'react-router-dom';
@@ -51,6 +51,7 @@ function ListaCategoria() {
     <>
     {
       categoria.map(categoria =>(
+    <Grid container className="fundoListaCat">
       <Box m={2} className = "todasCategoria" >
         <Card variant="outlined" >
           <CardContent>
@@ -81,6 +82,7 @@ function ListaCategoria() {
           </CardActions>
         </Card>
       </Box>
+      </Grid>
       ))
       }
     </>
