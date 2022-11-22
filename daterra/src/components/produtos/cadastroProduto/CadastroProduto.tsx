@@ -10,6 +10,7 @@ import {
   FormControl,
   FormHelperText,
   Menu,
+  Grid,
 } from "@material-ui/core";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -164,6 +165,7 @@ function CadastroProduto() {
   }
 
   return (
+   <Grid className="fundoCadProd">
     <Container maxWidth="sm" className="topo">
       <form onSubmit={cadastrarProduto} className='form'>
         <Typography
@@ -266,6 +268,7 @@ function CadastroProduto() {
         </FormControl>
       </form>
     </Container>
+  </Grid>
   );
 }
 export default CadastroProduto;

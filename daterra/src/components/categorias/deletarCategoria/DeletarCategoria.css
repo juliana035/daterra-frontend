@@ -12,3 +12,20 @@
     font-family: 'Barlow', sans-serif !important;
     color: white !important;
 }
+
+.fundoDeletCat{
+    background-color: #F6F6E9 ;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.deletCardCat{
+    border: 2px solid green;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
+    -moz-box-shadow: 0px 7px 16px 0px rgba(176, 169, 176,0.88);
+    box-shadow: 0px 7px 16px 0px rgba(176, 169, 176, 0.88);
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid } from "@material-ui/core"
 import { buscaId, post, put } from '../../../service/Service';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -102,6 +102,7 @@ function CadastroCategoria() {
     }
 
     return (
+    <Grid className='fundoCadCat'>
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de categoria</Typography>
@@ -111,6 +112,7 @@ function CadastroCategoria() {
                 </Button>
             </form>
         </Container>
+    </Grid>
     )
 }
 

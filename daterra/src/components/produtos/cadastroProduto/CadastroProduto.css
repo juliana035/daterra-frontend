@@ -21,3 +21,12 @@
     padding-bottom: 10px;
 }
 
+.fundoCadProd{
+    background-color: #F6F6E9;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    width: 100vw;
+    min-height: 100vh;
+
+}
